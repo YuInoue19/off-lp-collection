@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>フィットネス施設向け プレミアムCBDウェルネスライン導入のご提案</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-primary: #1a3c34;
+      --color-primary-light: #2d5a4e;
+      --color-accent: #b8964e;
+      --color-accent-light: #d4b06a;
+      --color-bg: #fafaf7;
+      --color-bg-warm: #f5f3ee;
+      --color-bg-dark: #0f2620;
+      --color-text: #2c2c2c;
+      --color-text-light: #6b6b6b;
+      --color-white: #ffffff;
+      --color-border: #e0ddd5;
+      --font-sans: 'Noto Sans JP', sans-serif;
+      --font-serif: 'Noto Serif JP', serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--color-text);
+      background: var(--color-bg);
+      line-height: 1.8;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ===== UTILITY ===== */
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section {
+      padding: 100px 0;
+    }
+
+    .section-label {
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: 1.75rem;
+      font-weight: 500;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      color: var(--color-primary);
+    }
+
+    .section-lead {
+      font-size: 1rem;
+      color: var(--color-text-light);
+      max-width: 680px;
+      line-height: 2;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 18px 48px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--color-accent);
+      color: var(--color-white);
+    }
+    .btn-primary:hover {
+      background: var(--color-accent-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(184, 150, 78, 0.3);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--color-primary);
+      border: 1.5px solid var(--color-primary);
+    }
+    .btn-outline:hover {
+      background: var(--color-primary);
+      color: var(--color-white);
+      transform: translateY(-2px);
+    }
+
+    .btn-white {
+      background: var(--color-white);
+      color: var(--color-primary);
+    }
+    .btn-white:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    }
+
+    /* ===== HEADER ===== */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--color-border);
+      padding: 16px 0;
+      transition: all 0.3s ease;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header-logo {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--color-primary);
+      text-decoration: none;
+    }
+
+    .header-cta .btn {
+      padding: 10px 28px;
+      font-size: 0.85rem;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(145deg, var(--color-bg-dark) 0%, var(--color-primary) 50%, var(--color-primary-light) 100%);
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background:
+        radial-gradient(ellipse at 20% 50%, rgba(184,150,78,0.08) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 20%, rgba(255,255,255,0.03) 0%, transparent 50%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 140px 0 100px;
+    }
+
+    .hero-label {
+      font-size: 0.8rem;
+      letter-spacing: 0.25em;
+      color: var(--color-accent);
+      margin-bottom: 32px;
+      font-weight: 400;
+    }
+
+    .hero-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 500;
+      color: var(--color-white);
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+
+    .hero-title em {
+      font-style: normal;
+      color: var(--color-accent);
+    }
+
+    .hero-subtitle {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.7);
+      line-height: 2;
+      max-width: 600px;
+      margin-bottom: 48px;
+      font-weight: 300;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .hero-note {
+      margin-top: 24px;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.4);
+    }
+
+    /* ===== PROBLEMS ===== */
+    .problems {
+      background: var(--color-white);
+    }
+
+    .problems-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .problem-card {
+      padding: 36px 32px;
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .problem-card:hover {
+      border-color: var(--color-accent);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+    }
+
+    .problem-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--color-bg-warm);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      font-size: 1.2rem;
+    }
+
+    .problem-card h3 {
+      font-size: 1rem;
+      font-weight: 500;
+      margin-bottom: 12px;
+      color: var(--color-primary);
+    }
+
+    .problem-card p {
+      font-size: 0.9rem;
+      color: var(--color-text-light);
+      line-height: 1.8;
+    }
+
+    /* ===== SOLUTION ===== */
+    .solution {
+      background: var(--color-bg-warm);
+    }
+
+    .solution-message {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      line-height: 2;
+      color: var(--color-primary);
+      max-width: 700px;
+      margin: 40px 0;
+      padding-left: 24px;
+      border-left: 3px solid var(--color-accent);
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 48px;
+      background: var(--color-white);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+      padding: 20px 28px;
+      text-align: left;
+      font-size: 0.92rem;
+    }
+
+    .comparison-table thead th {
+      background: var(--color-primary);
+      color: var(--color-white);
+      font-weight: 500;
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+    }
+
+    .comparison-table tbody tr {
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .comparison-table tbody tr:last-child {
+      border-bottom: none;
+    }
+
+    .comparison-table td:first-child {
+      color: var(--color-text-light);
+    }
+
+    .comparison-table td:last-child {
+      color: var(--color-primary);
+      font-weight: 500;
+    }
+
+    /* ===== PRODUCTS ===== */
+    .products {
+      background: var(--color-white);
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 32px;
+      margin-top: 48px;
+    }
+
+    .product-card {
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .product-card:hover {
+      box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+      transform: translateY(-4px);
+    }
+
+    .product-visual {
+      height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3.5rem;
+    }
+
+    .product-visual.capsule {
+      background: linear-gradient(135deg, #f7f5f0 0%, #ede9e0 100%);
+    }
+
+    .product-visual.oil {
+      background: linear-gradient(135deg, #f0f5f2 0%, #dce8e0 100%);
+    }
+
+    .product-body {
+      padding: 32px;
+    }
+
+    .product-body h3 {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: var(--color-primary);
+      margin-bottom: 8px;
+    }
+
+    .product-body .product-tagline {
+      font-size: 0.85rem;
+      color: var(--color-accent);
+      margin-bottom: 20px;
+    }
+
+    .product-body p {
+      font-size: 0.9rem;
+      color: var(--color-text-light);
+      margin-bottom: 12px;
+    }
+
+    .product-scenes {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .product-scenes h4 {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--color-text);
+      margin-bottom: 8px;
+      letter-spacing: 0.05em;
+    }
+
+    .product-scenes span {
+      display: inline-block;
+      padding: 4px 12px;
+      background: var(--color-bg-warm);
+      border-radius: 20px;
+      font-size: 0.8rem;
+      color: var(--color-text-light);
+      margin: 4px 4px 4px 0;
+    }
+
+    /* ===== PB/OEM ===== */
+    .oem {
+      background: var(--color-bg-dark);
+      color: var(--color-white);
+    }
+
+    .oem .section-label {
+      color: var(--color-accent);
+    }
+
+    .oem .section-title {
+      color: var(--color-white);
+    }
+
+    .oem .section-lead {
+      color: rgba(255,255,255,0.6);
+    }
+
+    .oem-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 24px;
+      margin-top: 56px;
+    }
+
+    .oem-step {
+      text-align: center;
+      position: relative;
+    }
+
+    .oem-step::after {
+      content: '';
+      position: absolute;
+      top: 28px;
+      right: -12px;
+      width: 24px;
+      height: 1px;
+      background: rgba(255,255,255,0.2);
+    }
+
+    .oem-step:last-child::after {
+      display: none;
+    }
+
+    .step-number {
+      width: 56px;
+      height: 56px;
+      border: 1.5px solid var(--color-accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      color: var(--color-accent);
+    }
+
+    .oem-step h4 {
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    .oem-step p {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.7;
+    }
+
+    .oem-note {
+      text-align: center;
+      margin-top: 56px;
+      padding: 32px;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 8px;
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.7);
+    }
+
+    .oem-note strong {
+      color: var(--color-accent);
+    }
+
+    /* ===== BENEFITS ===== */
+    .benefits {
+      background: var(--color-white);
+    }
+
+    .benefits-list {
+      margin-top: 48px;
+    }
+
+    .benefit-item {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 32px;
+      padding: 40px 0;
+      border-bottom: 1px solid var(--color-border);
+      align-items: start;
+    }
+
+    .benefit-item:last-child {
+      border-bottom: none;
+    }
+
+    .benefit-num {
+      font-family: var(--font-serif);
+      font-size: 2.5rem;
+      color: var(--color-accent);
+      line-height: 1;
+      opacity: 0.6;
+    }
+
+    .benefit-content h3 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--color-primary);
+      margin-bottom: 12px;
+    }
+
+    .benefit-content p {
+      font-size: 0.92rem;
+      color: var(--color-text-light);
+      line-height: 1.9;
+    }
+
+    /* ===== QUALITY ===== */
+    .quality {
+      background: var(--color-bg-warm);
+    }
+
+    .quality-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 48px;
+    }
+
+    .quality-item {
+      background: var(--color-white);
+      padding: 32px;
+      border-radius: 8px;
+      border-left: 3px solid var(--color-accent);
+    }
+
+    .quality-item h4 {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--color-primary);
+      margin-bottom: 8px;
+    }
+
+    .quality-item p {
+      font-size: 0.85rem;
+      color: var(--color-text-light);
+      line-height: 1.8;
+    }
+
+    /* ===== FLOW ===== */
+    .flow {
+      background: var(--color-white);
+    }
+
+    .flow-steps {
+      max-width: 680px;
+      margin: 48px auto 0;
+    }
+
+    .flow-step {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 24px;
+      padding-bottom: 40px;
+      position: relative;
+    }
+
+    .flow-step:not(:last-child)::before {
+      content: '';
+      position: absolute;
+      left: 23px;
+      top: 48px;
+      bottom: 0;
+      width: 1px;
+      background: var(--color-border);
+    }
+
+    .flow-step-dot {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--color-primary);
+      color: var(--color-white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-serif);
+      font-size: 0.95rem;
+      flex-shrink: 0;
+    }
+
+    .flow-step h4 {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--color-primary);
+      margin-bottom: 8px;
+    }
+
+    .flow-step p {
+      font-size: 0.9rem;
+      color: var(--color-text-light);
+      line-height: 1.8;
+    }
+
+    .flow-note {
+      text-align: center;
+      margin-top: 32px;
+      font-size: 0.9rem;
+      color: var(--color-text-light);
+    }
+
+    .flow-note strong {
+      color: var(--color-primary);
+    }
+
+    /* ===== FAQ ===== */
+    .faq {
+      background: var(--color-bg-warm);
+    }
+
+    .faq-list {
+      max-width: 760px;
+      margin: 48px auto 0;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 24px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      text-align: left;
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--color-primary);
+    }
+
+    .faq-question::after {
+      content: '+';
+      font-size: 1.4rem;
+      font-weight: 300;
+      color: var(--color-accent);
+      transition: transform 0.3s ease;
+      flex-shrink: 0;
+      margin-left: 16px;
+    }
+
+    .faq-item.active .faq-question::after {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s ease;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 300px;
+      padding-bottom: 24px;
+    }
+
+    .faq-answer p {
+      font-size: 0.9rem;
+      color: var(--color-text-light);
+      line-height: 1.9;
+    }
+
+    /* ===== FINAL CTA ===== */
+    .final-cta {
+      background: linear-gradient(145deg, var(--color-bg-dark) 0%, var(--color-primary) 100%);
+      text-align: center;
+      padding: 100px 0;
+    }
+
+    .final-cta .section-title {
+      color: var(--color-white);
+      font-size: 1.6rem;
+      margin-bottom: 16px;
+    }
+
+    .final-cta .section-lead {
+      color: rgba(255,255,255,0.6);
+      margin: 0 auto 56px;
+      text-align: center;
+    }
+
+    .cta-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .cta-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 12px;
+      padding: 40px 32px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .cta-card:hover {
+      background: rgba(255,255,255,0.1);
+      transform: translateY(-4px);
+    }
+
+    .cta-card-icon {
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+
+    .cta-card h3 {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--color-white);
+      margin-bottom: 12px;
+    }
+
+    .cta-card p {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 24px;
+      line-height: 1.7;
+    }
+
+    .cta-card .btn {
+      width: 100%;
+      text-align: center;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: var(--color-bg-dark);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    .footer p {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.3);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .section { padding: 72px 0; }
+
+      .hero-content { padding: 120px 0 72px; }
+
+      .hero-ctas {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .hero-ctas .btn {
+        text-align: center;
+      }
+
+      .benefit-item {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .benefit-num {
+        font-size: 1.5rem;
+      }
+
+      .oem-steps {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .oem-step::after {
+        display: none;
+      }
+
+      .comparison-table th,
+      .comparison-table td {
+        padding: 14px 16px;
+        font-size: 0.85rem;
+      }
+
+      .products-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-cards {
+        grid-template-columns: 1fr;
+      }
+
+      .flow-step {
+        grid-template-columns: 40px 1fr;
+        gap: 16px;
+      }
+
+      .flow-step-dot {
+        width: 40px;
+        height: 40px;
+        font-size: 0.85rem;
+      }
+
+      .flow-step:not(:last-child)::before {
+        left: 19px;
+      }
+    }
+
+    /* ===== ANIMATION ===== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#" class="header-logo">CBD Wellness for Fitness</a>
+      <div class="header-cta">
+        <a href="#contact" class="btn btn-primary">導入資料を受け取る</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-content">
+      <p class="hero-label">PREMIUM CBD WELLNESS LINE FOR FITNESS</p>
+      <h1 class="hero-title">
+        <em>「整える」</em>を、<br>施設の価値にする。
+      </h1>
+      <p class="hero-subtitle">
+        高価格帯のジム・ピラティス・ウェルネス施設のための、<br>
+        プレミアムCBDウェルネスライン導入のご提案。<br>
+        会員の"リカバリー習慣"を、御社ブランドの新しい売上と体験価値に。
+      </p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-primary">導入資料を受け取る</a>
+        <a href="#oem" class="btn btn-outline" style="border-color: rgba(255,255,255,0.3); color: var(--color-white);">PB/OEM相談をする</a>
+      </div>
+      <p class="hero-note">※ 小ロットからの卸販売・PB/OEM対応可能</p>
+    </div>
+  </section>
+
+  <!-- PROBLEMS -->
+  <section class="problems section">
+    <div class="container">
+      <p class="section-label fade-in">Issues</p>
+      <h2 class="section-title fade-in">こんなお悩みはありませんか？</h2>
+      <div class="problems-grid">
+        <div class="problem-card fade-in">
+          <div class="problem-icon">01</div>
+          <h3>物販が施設の世界観に合わない</h3>
+          <p>プロテインやサプリは置いているが、プレミアム施設のブランドイメージにそぐわず、売上にもつながらない。</p>
+        </div>
+        <div class="problem-card fade-in">
+          <div class="problem-icon">02</div>
+          <h3>他施設との差別化が難しい</h3>
+          <p>設備やプログラムだけでは差がつきにくく、会員にとっての"特別さ"が薄れてきている。</p>
+        </div>
+        <div class="problem-card fade-in">
+          <div class="problem-icon">03</div>
+          <h3>高単価会員に合う商材がない</h3>
+          <p>「よいものを選びたい」会員の期待に応える物販商材が見つからない。</p>
+        </div>
+        <div class="problem-card fade-in">
+          <div class="problem-icon">04</div>
+          <h3>単発売上で終わってしまう</h3>
+          <p>イベントやグッズは一過性。継続的な物販売上の柱がほしい。</p>
+        </div>
+        <div class="problem-card fade-in">
+          <div class="problem-icon">05</div>
+          <h3>自社ブランド商品をつくりたい</h3>
+          <p>施設のブランドに合うPB商材を検討したいが、ロットやコストの壁が高い。</p>
+        </div>
+        <div class="problem-card fade-in">
+          <div class="problem-icon">06</div>
+          <h3>トレーニング以外の価値を届けたい</h3>
+          <p>身体を動かすだけでなく、"生活全体を整える"体験を会員に提供したい。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUTION -->
+  <section class="solution section">
+    <div class="container">
+      <p class="section-label fade-in">Solution</p>
+      <h2 class="section-title fade-in">施設の"ブランド体験"に乗せる<br>ウェルネス商材という選択</h2>
+      <div class="solution-message fade-in">
+        単なるCBD商品の卸売ではありません。<br>
+        御社の施設ブランドに合う形で「整える習慣」を会員に届け、<br>
+        新しい物販売上と顧客体験をつくる仕組みをご提案します。
+      </div>
+      <p class="section-lead fade-in" style="margin-bottom: 16px;">
+        CBD（カンナビジオール）は、欧米のウェルネスシーンで広く取り入れられている植物由来成分です。
+        「鍛える」の後にある<strong>「整える」「休む」「ゆるめる」</strong>という文脈と相性がよく、
+        高所得者層を中心に日々のセルフケア習慣として定着しつつあります。
+      </p>
+      <table class="comparison-table fade-in">
+        <thead>
+          <tr>
+            <th>従来の物販</th>
+            <th>CBDウェルネスライン</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>プロテイン・BCAA中心</td>
+            <td>コンディショニング・リカバリー文脈</td>
+          </tr>
+          <tr>
+            <td>どの施設でも同じ商品</td>
+            <td>PB化で御社だけのブランド商材に</td>
+          </tr>
+          <tr>
+            <td>単発購入が多い</td>
+            <td>日常習慣＝継続購入モデル</td>
+          </tr>
+          <tr>
+            <td>価格競争に巻き込まれやすい</td>
+            <td>プレミアム価格帯で利益率を確保</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="products section">
+    <div class="container">
+      <p class="section-label fade-in">Products</p>
+      <h2 class="section-title fade-in">商品ラインナップ</h2>
+      <p class="section-lead fade-in">施設のコンセプトや会員層に合わせて、最適な組み合わせをご提案します。</p>
+      <div class="products-grid">
+        <div class="product-card fade-in">
+          <div class="product-visual capsule">
+            <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+              <rect x="24" y="12" width="32" height="56" rx="16" fill="#1a3c34" opacity="0.12"/>
+              <rect x="28" y="16" width="24" height="48" rx="12" fill="#1a3c34" opacity="0.08"/>
+              <line x1="28" y1="40" x2="52" y2="40" stroke="#b8964e" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="product-body">
+            <h3>CBD カプセル</h3>
+            <p class="product-tagline">日々のコンディショニング習慣に</p>
+            <p>味や匂いがなく取り入れやすいフォーマット。持ち運びやすく、施設での購入から自宅での継続使用へ。CBDが初めての方にも勧めやすい形状です。</p>
+            <div class="product-scenes">
+              <h4>想定シーン</h4>
+              <span>トレーニング後のルーティン</span>
+              <span>就寝前のリカバリー</span>
+              <span>日常のセルフケア</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card fade-in">
+          <div class="product-visual oil">
+            <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+              <rect x="30" y="8" width="20" height="8" rx="2" fill="#1a3c34" opacity="0.15"/>
+              <rect x="26" y="16" width="28" height="56" rx="4" fill="#1a3c34" opacity="0.08"/>
+              <rect x="26" y="16" width="28" height="56" rx="4" stroke="#1a3c34" stroke-width="1" opacity="0.15"/>
+              <circle cx="40" cy="44" r="10" fill="#b8964e" opacity="0.15"/>
+            </svg>
+          </div>
+          <div class="product-body">
+            <h3>CBD オイル</h3>
+            <p class="product-tagline">上質な"整える時間"を演出</p>
+            <p>舌下摂取で体感しやすく、使用体験そのものが上質。ボトルデザインの自由度が高く、PBブランド化に最適です。</p>
+            <div class="product-scenes">
+              <h4>想定シーン</h4>
+              <span>ヨガ・ピラティス前後</span>
+              <span>施設内カフェでの提供</span>
+              <span>上質なセルフケアギフト</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PB/OEM -->
+  <section class="oem section" id="oem">
+    <div class="container">
+      <p class="section-label fade-in">Private Brand / OEM</p>
+      <h2 class="section-title fade-in">御社ブランドの<br>ウェルネスラインをつくる</h2>
+      <p class="section-lead fade-in">「仕入れて並べる」だけでなく、「御社の名前で届ける」という選択肢。<br>小ロットから対応可能です。</p>
+      <div class="oem-steps fade-in">
+        <div class="oem-step">
+          <div class="step-number">1</div>
+          <h4>ヒアリング</h4>
+          <p>施設のブランドコンセプト・ターゲット会員層を伺います</p>
+        </div>
+        <div class="oem-step">
+          <div class="step-number">2</div>
+          <h4>処方・デザイン提案</h4>
+          <p>成分配合・パッケージデザインをご提案</p>
+        </div>
+        <div class="oem-step">
+          <div class="step-number">3</div>
+          <h4>サンプル製造</h4>
+          <p>実物サンプルで品質・使用感を確認</p>
+        </div>
+        <div class="oem-step">
+          <div class="step-number">4</div>
+          <h4>本製造・納品</h4>
+          <p>ご希望数量で製造し施設へ納品</p>
+        </div>
+        <div class="oem-step">
+          <div class="step-number">5</div>
+          <h4>販売サポート</h4>
+          <p>販促ツール・会員向け説明資料もご用意</p>
+        </div>
+      </div>
+      <div class="oem-note fade-in">
+        <strong>小ロットから対応可能。</strong>まずは1アイテムからのテスト導入も歓迎します。
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="benefits section">
+    <div class="container">
+      <p class="section-label fade-in">Benefits</p>
+      <h2 class="section-title fade-in">導入メリット</h2>
+      <div class="benefits-list">
+        <div class="benefit-item fade-in">
+          <div class="benefit-num">01</div>
+          <div class="benefit-content">
+            <h3>新しい売上の柱になる</h3>
+            <p>1本あたりの単価が高く、利益率を確保しやすい商材です。日常的なセルフケア習慣のため、毎月の継続購入（リピート購入）につながりやすい構造で、安定した物販売上の基盤をつくれます。</p>
+          </div>
+        </div>
+        <div class="benefit-item fade-in">
+          <div class="benefit-num">02</div>
+          <div class="benefit-content">
+            <h3>施設のブランド価値を高める</h3>
+            <p>「鍛える場所」から「整える場所」へ。施設体験の幅が広がります。PB化すれば、御社だけのウェルネスブランドとして会員に届けられ、他施設にはない独自の価値になります。</p>
+          </div>
+        </div>
+        <div class="benefit-item fade-in">
+          <div class="benefit-num">03</div>
+          <div class="benefit-content">
+            <h3>高所得者層との親和性が高い</h3>
+            <p>海外のプレミアムウェルネス施設では、CBDアイテムの物販は定番化しています。「よいものを選びたい」会員層に自然に受け入れられるカテゴリです。</p>
+          </div>
+        </div>
+        <div class="benefit-item fade-in">
+          <div class="benefit-num">04</div>
+          <div class="benefit-content">
+            <h3>導入しやすい</h3>
+            <p>卸販売は少量から開始可能。在庫リスクを最小限に抑えられます。PB/OEMも小ロット対応で、大きな初期投資なしでスタートできます。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUALITY -->
+  <section class="quality section">
+    <div class="container">
+      <p class="section-label fade-in">Quality & Trust</p>
+      <h2 class="section-title fade-in">安心して会員にお届けするために</h2>
+      <p class="section-lead fade-in">高価格帯の施設で取り扱う商材だからこそ、品質と透明性が不可欠です。</p>
+      <div class="quality-grid">
+        <div class="quality-item fade-in">
+          <h4>原料</h4>
+          <p>厳選された原料を使用。産地・抽出方法まで透明性を確保しています。</p>
+        </div>
+        <div class="quality-item fade-in">
+          <h4>製造体制</h4>
+          <p>品質管理基準に準拠した国内工場で製造。安定した品質をお届けします。</p>
+        </div>
+        <div class="quality-item fade-in">
+          <h4>成分検査</h4>
+          <p>全商品にCOA（成分分析証明書）を発行。第三者機関による検査を実施しています。</p>
+        </div>
+        <div class="quality-item fade-in">
+          <h4>法令遵守</h4>
+          <p>THCフリー。日本国内の法令に完全準拠した商品のみを取り扱っています。</p>
+        </div>
+        <div class="quality-item fade-in">
+          <h4>供給安定性</h4>
+          <p>安定した供給体制で、継続的な販売をサポートします。</p>
+        </div>
+        <div class="quality-item fade-in">
+          <h4>施設向けサポート</h4>
+          <p>COAの施設内掲示用データ、会員向け説明資料もご提供可能です。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLOW -->
+  <section class="flow section">
+    <div class="container">
+      <p class="section-label fade-in" style="text-align:center;">Flow</p>
+      <h2 class="section-title fade-in" style="text-align:center;">導入の流れ</h2>
+      <div class="flow-steps">
+        <div class="flow-step fade-in">
+          <div class="flow-step-dot">1</div>
+          <div>
+            <h4>お問い合わせ・資料請求</h4>
+            <p>まずは資料をご覧ください。施設の状況やご関心に合わせた情報をお届けします。</p>
+          </div>
+        </div>
+        <div class="flow-step fade-in">
+          <div class="flow-step-dot">2</div>
+          <div>
+            <h4>ヒアリング</h4>
+            <p>オンラインまたは訪問で、施設の規模・ブランド・会員層・ご要望を伺います。</p>
+          </div>
+        </div>
+        <div class="flow-step fade-in">
+          <div class="flow-step-dot">3</div>
+          <div>
+            <h4>ご提案・サンプル送付</h4>
+            <p>御社に合った商材・導入プランをご提案。サンプルで品質をご確認いただけます。</p>
+          </div>
+        </div>
+        <div class="flow-step fade-in">
+          <div class="flow-step-dot">4</div>
+          <div>
+            <h4>契約・初回発注</h4>
+            <p>卸またはPB/OEMの条件を決定し、初回納品へ進みます。</p>
+          </div>
+        </div>
+        <div class="flow-step fade-in">
+          <div class="flow-step-dot">5</div>
+          <div>
+            <h4>販売開始・継続サポート</h4>
+            <p>会員向けPOP・説明資料のご提供、販売動向のフォローアップも行います。</p>
+          </div>
+        </div>
+      </div>
+      <p class="flow-note fade-in">
+        <strong>卸販売は最短2週間で開始可能。</strong>PB/OEMはヒアリングから約2〜3ヶ月が目安です。
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq section">
+    <div class="container">
+      <p class="section-label fade-in" style="text-align:center;">FAQ</p>
+      <h2 class="section-title fade-in" style="text-align:center;">よくある質問</h2>
+      <div class="faq-list">
+        <div class="faq-item fade-in">
+          <button class="faq-question">CBDは合法ですか？</button>
+          <div class="faq-answer">
+            <p>はい。当社が取り扱うCBD商品はすべてTHCフリーで、日本の法令に完全に準拠しています。安心して施設でお取り扱いいただけます。</p>
+          </div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-question">会員にどう説明すればいいですか？</button>
+          <div class="faq-answer">
+            <p>導入時に「会員向け説明リーフレット」や「スタッフ向けトークスクリプト」をご用意しています。"コンディショニング・リカバリー習慣"として自然にご案内いただけます。</p>
+          </div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-question">どのくらいの量から始められますか？</button>
+          <div class="faq-answer">
+            <p>卸販売の場合、少量からスタート可能です。まずはテスト導入として小ロットからお試しいただけます。詳しくはお問い合わせください。</p>
+          </div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-question">PB/OEMは何個から対応できますか？</button>
+          <div class="faq-answer">
+            <p>小ロットから対応しています。1アイテム・少量ロットでのテスト製造も可能です。詳しい条件はお問い合わせください。</p>
+          </div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-question">既存の物販スペースが小さいのですが導入できますか？</button>
+          <div class="faq-answer">
+            <p>カプセルやオイルはコンパクトな商品です。レセプション横やカフェカウンターなど、小さなスペースでも十分に展開いただけます。</p>
+          </div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-question">会員に売れるか不安です。</button>
+          <div class="faq-answer">
+            <p>テスト導入プランをご用意しています。少量から始めて反応を確認し、好感触であれば拡大するステップを踏めます。初期リスクを抑えた形でスタートできます。</p>
+          </div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-question">効果効能を謳えますか？</button>
+          <div class="faq-answer">
+            <p>医薬品ではないため、特定の効果効能を表示することはできません。「日々のコンディショニング習慣として」「整えるセルフケアとして」といったウェルネス文脈でのご案内をお勧めしており、表現ガイドラインもお渡ししています。</p>
+          </div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-question">返品・交換は可能ですか？</button>
+          <div class="faq-answer">
+            <p>商品の品質に問題があった場合は交換対応いたします。詳しい条件は契約時にご案内します。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta" id="contact">
+    <div class="container">
+      <h2 class="section-title fade-in">御社の施設にふさわしい<br>ウェルネス物販、はじめませんか。</h2>
+      <p class="section-lead fade-in">まずは情報収集からでも構いません。お気軽にお問い合わせください。</p>
+      <div class="cta-cards">
+        <div class="cta-card fade-in">
+          <div class="cta-card-icon">&#9993;</div>
+          <h3>導入資料を受け取る</h3>
+          <p>商品・導入条件をまとめた資料をお送りします。まずはこちらからご覧ください。</p>
+          <a href="#" class="btn btn-primary">資料を請求する</a>
+        </div>
+        <div class="cta-card fade-in">
+          <div class="cta-card-icon">&#9998;</div>
+          <h3>PB/OEM相談をする</h3>
+          <p>御社ブランドでの展開をご検討の方へ。進め方・条件についてご相談いただけます。</p>
+          <a href="#" class="btn btn-primary">PB/OEM相談する</a>
+        </div>
+        <div class="cta-card fade-in">
+          <div class="cta-card-icon">&#10024;</div>
+          <h3>サンプルについて問い合わせる</h3>
+          <p>実物サンプルで品質をお確かめください。テスト導入のご相談もこちらから。</p>
+          <a href="#" class="btn btn-primary">サンプルを問い合わせる</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 CBD Wellness for Fitness. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // FAQ Accordion
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var item = this.parentElement;
+        var isActive = item.classList.contains('active');
+        // Close all
+        document.querySelectorAll('.faq-item').forEach(function(i) {
+          i.classList.remove('active');
+        });
+        // Toggle current
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    });
+
+    // Scroll fade-in animation
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(function(el) {
+      observer.observe(el);
+    });
+  </script>
+
+</body>
+</html>

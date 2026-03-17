@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>医療機関・薬局向け CBDカプセル / CBDオイル 導入のご案内</title>
+  <style>
+    :root {
+      --primary: #1a5632;
+      --primary-light: #e8f5ed;
+      --primary-dark: #0e3a20;
+      --accent: #2e7d4f;
+      --text: #2c2c2c;
+      --text-light: #5a5a5a;
+      --bg: #fafbfa;
+      --white: #ffffff;
+      --border: #d4ddd8;
+      --gold: #8b7a3e;
+      --gold-light: #f7f4e9;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ===== HEADER ===== */
+    .header {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header-logo {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: 0.05em;
+    }
+    .header-cta {
+      background: var(--primary);
+      color: var(--white);
+      padding: 8px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    .header-cta:hover { background: var(--primary-dark); }
+
+    /* ===== FIRST VIEW ===== */
+    .fv {
+      background: linear-gradient(160deg, var(--primary-dark) 0%, var(--primary) 50%, var(--accent) 100%);
+      color: var(--white);
+      padding: 100px 24px 80px;
+      text-align: center;
+    }
+    .fv-label {
+      display: inline-block;
+      border: 1px solid rgba(255,255,255,0.4);
+      border-radius: 3px;
+      padding: 4px 16px;
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      margin-bottom: 28px;
+      color: rgba(255,255,255,0.85);
+    }
+    .fv h1 {
+      font-size: 36px;
+      font-weight: 800;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      letter-spacing: 0.02em;
+    }
+    .fv h1 span {
+      display: inline;
+      background: linear-gradient(transparent 60%, rgba(255,255,255,0.15) 60%);
+    }
+    .fv-sub {
+      font-size: 16px;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 40px;
+      line-height: 1.9;
+    }
+    .fv-points {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+    .fv-point {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 6px;
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .btn-primary {
+      display: inline-block;
+      background: var(--white);
+      color: var(--primary);
+      padding: 16px 48px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 700;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.2);
+    }
+    .btn-green {
+      display: inline-block;
+      background: var(--primary);
+      color: var(--white);
+      padding: 16px 48px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 700;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 16px rgba(26,86,50,0.3);
+      border: none;
+      cursor: pointer;
+    }
+    .btn-green:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(26,86,50,0.4);
+      background: var(--primary-dark);
+    }
+    .btn-outline {
+      display: inline-block;
+      background: transparent;
+      color: var(--primary);
+      padding: 14px 40px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 700;
+      border: 2px solid var(--primary);
+      transition: all 0.2s;
+    }
+    .btn-outline:hover {
+      background: var(--primary);
+      color: var(--white);
+    }
+
+    /* ===== SECTIONS ===== */
+    .section {
+      padding: 80px 24px;
+    }
+    .section-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .section-label {
+      font-size: 12px;
+      letter-spacing: 0.15em;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+    .section-title {
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 12px;
+      line-height: 1.4;
+      color: var(--primary-dark);
+    }
+    .section-lead {
+      font-size: 15px;
+      color: var(--text-light);
+      margin-bottom: 48px;
+      line-height: 1.9;
+    }
+    .bg-white { background: var(--white); }
+    .bg-light { background: var(--bg); }
+    .bg-green-light { background: var(--primary-light); }
+
+    /* ===== PROBLEMS ===== */
+    .problem-list {
+      list-style: none;
+    }
+    .problem-item {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--primary);
+      border-radius: 0 8px 8px 0;
+      padding: 20px 24px;
+      margin-bottom: 12px;
+      font-size: 15px;
+      line-height: 1.7;
+      position: relative;
+      padding-left: 48px;
+    }
+    .problem-item::before {
+      content: "?";
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 22px;
+      height: 22px;
+      background: var(--primary-light);
+      color: var(--primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    /* ===== VALUE CARDS ===== */
+    .value-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .value-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 28px 24px;
+      transition: box-shadow 0.2s;
+    }
+    .value-card:hover {
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    }
+    .value-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--primary-light);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      margin-bottom: 16px;
+    }
+    .value-card h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--primary-dark);
+    }
+    .value-card p {
+      font-size: 14px;
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+
+    /* ===== QUALITY TABLE ===== */
+    .quality-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--white);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    }
+    .quality-table th,
+    .quality-table td {
+      padding: 16px 20px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+    }
+    .quality-table th {
+      background: var(--primary);
+      color: var(--white);
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.05em;
+    }
+    .quality-table tr:last-child td { border-bottom: none; }
+    .quality-table td:first-child {
+      font-weight: 700;
+      color: var(--primary-dark);
+      white-space: nowrap;
+      width: 200px;
+    }
+    .quality-table tr:nth-child(even) { background: var(--primary-light); }
+    .placeholder {
+      color: #b0b0b0;
+      font-style: italic;
+    }
+
+    /* ===== STEPS ===== */
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      position: relative;
+    }
+    .step {
+      display: flex;
+      gap: 24px;
+      position: relative;
+      padding-bottom: 40px;
+    }
+    .step:last-child { padding-bottom: 0; }
+    .step-num-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-shrink: 0;
+    }
+    .step-num {
+      width: 48px;
+      height: 48px;
+      background: var(--primary);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+    .step-line {
+      width: 2px;
+      flex: 1;
+      background: var(--border);
+      margin-top: 8px;
+    }
+    .step:last-child .step-line { display: none; }
+    .step-body { padding-top: 10px; }
+    .step-body h3 {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--primary-dark);
+    }
+    .step-body p {
+      font-size: 14px;
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+
+    /* ===== USE CASES ===== */
+    .usecase-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .usecase-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 28px 32px;
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+    }
+    .usecase-badge {
+      flex-shrink: 0;
+      width: 56px;
+      height: 56px;
+      background: var(--gold-light);
+      border: 2px solid var(--gold);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+    }
+    .usecase-card h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--primary-dark);
+    }
+    .usecase-card p {
+      font-size: 14px;
+      color: var(--text-light);
+      line-height: 1.8;
+    }
+
+    /* ===== LINEUP ===== */
+    .lineup-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .lineup-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 32px 28px;
+      text-align: center;
+    }
+    .lineup-icon {
+      width: 72px;
+      height: 72px;
+      background: var(--primary-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      margin: 0 auto 20px;
+    }
+    .lineup-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--primary-dark);
+    }
+    .lineup-card .lineup-type {
+      font-size: 13px;
+      color: var(--text-light);
+      margin-bottom: 16px;
+    }
+    .lineup-card p {
+      font-size: 14px;
+      color: var(--text-light);
+      line-height: 1.7;
+      text-align: left;
+    }
+    .lineup-spec {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--text-light);
+    }
+
+    /* ===== FAQ ===== */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .faq-q {
+      padding: 20px 24px;
+      font-weight: 700;
+      font-size: 15px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      user-select: none;
+    }
+    .faq-q::before {
+      content: "Q";
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      background: var(--primary);
+      color: var(--white);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 800;
+    }
+    .faq-q::after {
+      content: "+";
+      margin-left: auto;
+      font-size: 20px;
+      color: var(--text-light);
+      transition: transform 0.2s;
+    }
+    .faq-item.open .faq-q::after {
+      content: "-";
+    }
+    .faq-a {
+      padding: 0 24px 20px 64px;
+      font-size: 14px;
+      color: var(--text-light);
+      line-height: 1.8;
+      display: none;
+    }
+    .faq-item.open .faq-a { display: block; }
+
+    /* ===== FINAL CTA ===== */
+    .final-cta {
+      background: linear-gradient(160deg, var(--primary-dark) 0%, var(--primary) 100%);
+      color: var(--white);
+      padding: 80px 24px;
+      text-align: center;
+    }
+    .final-cta h2 {
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+    .final-cta p {
+      font-size: 15px;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 48px;
+      line-height: 1.8;
+    }
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .cta-btn {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      background: var(--white);
+      color: var(--primary-dark);
+      padding: 24px 36px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      min-width: 220px;
+    }
+    .cta-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    }
+    .cta-btn .cta-num {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+      margin-bottom: 8px;
+    }
+    .cta-btn .cta-label {
+      font-size: 15px;
+      font-weight: 700;
+    }
+    .cta-btn .cta-desc {
+      font-size: 12px;
+      color: var(--text-light);
+      margin-top: 6px;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: #1a1a1a;
+      color: rgba(255,255,255,0.5);
+      padding: 32px 24px;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .fv { padding: 64px 20px 56px; }
+      .fv h1 { font-size: 24px; }
+      .fv-sub { font-size: 14px; }
+      .fv-points { gap: 10px; }
+      .fv-point { font-size: 12px; padding: 8px 14px; }
+      .section { padding: 56px 20px; }
+      .section-title { font-size: 22px; }
+      .value-grid { grid-template-columns: 1fr; }
+      .lineup-grid { grid-template-columns: 1fr; }
+      .usecase-card { flex-direction: column; }
+      .cta-buttons { flex-direction: column; align-items: center; }
+      .cta-btn { min-width: 280px; }
+      .quality-table td:first-child { width: auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="header-logo">CBD Medical Supply</div>
+      <a href="#contact" class="header-cta">資料請求</a>
+    </div>
+  </header>
+
+  <!-- FIRST VIEW -->
+  <section class="fv">
+    <div class="fv-label">医療機関・薬局 向けご案内</div>
+    <h1><span>院内で提案できる、</span><br><span>品質資料つきのウェルネス商材。</span></h1>
+    <p class="fv-sub">
+      CBDカプセル / CBDオイル ― 医療機関・薬局向けの導入をご支援します。<br>
+      品質資料完備。小ロット対応。導入フローも明確です。
+    </p>
+    <div class="fv-points">
+      <div class="fv-point">品質資料完備</div>
+      <div class="fv-point">小ロット対応</div>
+      <div class="fv-point">院内説明資料あり</div>
+      <div class="fv-point">継続提案しやすい</div>
+    </div>
+    <a href="#contact" class="btn-primary">医療機関向け資料を請求する</a>
+  </section>
+
+  <!-- S1: 課題提起 -->
+  <section class="section bg-white">
+    <div class="section-inner">
+      <p class="section-label">CHALLENGES</p>
+      <h2 class="section-title">こんなお悩みはありませんか？</h2>
+      <p class="section-lead">院内販売や自由診療の現場で、こうした声が増えています。</p>
+      <ul class="problem-list">
+        <li class="problem-item">自由診療や院内販売で扱える商材を探しているが、品質面で安心できるものが少ない</li>
+        <li class="problem-item">睡眠や休息に関する患者さんからの相談に、提案の選択肢が限られている</li>
+        <li class="problem-item">一般的なEC商材をそのまま院内で扱うのは、信用面で抵抗がある</li>
+        <li class="problem-item">取り扱いを検討したくても、品質資料が不十分な商材ばかりで判断できない</li>
+        <li class="problem-item">導入の手順やサポート体制が見えず、検討が前に進まない</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- S2: 提供価値 -->
+  <section class="section bg-light">
+    <div class="section-inner">
+      <p class="section-label">WHY CBD MEDICAL SUPPLY</p>
+      <h2 class="section-title">院内販売の新しい選択肢として</h2>
+      <p class="section-lead">
+        CBD（カンナビジオール）は、睡眠や休息、日々のコンディションに関心を持つ方が増えるなかで、<br>
+        ウェルネス習慣のひとつとして注目されている成分です。<br>
+        当商品は、医療機関・薬局が院内で取り扱うことを前提に設計しています。
+      </p>
+      <div class="value-grid">
+        <div class="value-card">
+          <div class="value-icon">&#128203;</div>
+          <h3>説明しやすい</h3>
+          <p>患者さん向けの説明資料・院内掲示用資料をご用意。専門家の言葉で提案しやすい設計です。</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">&#128269;</div>
+          <h3>品質資料が揃っている</h3>
+          <p>COA（成分分析証明書）をはじめとする品質情報を開示。導入前に十分ご確認いただけます。</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">&#128260;</div>
+          <h3>継続提案しやすい</h3>
+          <p>日常的に取り入れるウェルネス商材として設計。リピート購入につながりやすい商品特性です。</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">&#128737;</div>
+          <h3>信用を損ねない</h3>
+          <p>品質管理体制・原料トレーサビリティを明示。院の信用を守りながら取り扱えます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S3: 品質管理 -->
+  <section class="section bg-white">
+    <div class="section-inner">
+      <p class="section-label">QUALITY ASSURANCE</p>
+      <h2 class="section-title">品質管理体制・検査情報</h2>
+      <p class="section-lead">安心して導入をご検討いただくために、以下の情報を開示しています。</p>
+      <table class="quality-table">
+        <thead>
+          <tr>
+            <th>項目</th>
+            <th>内容</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>品質管理体制</td>
+            <td class="placeholder">※ 詳細は資料請求後にご案内いたします</td>
+          </tr>
+          <tr>
+            <td>第三者検査機関</td>
+            <td class="placeholder">※ 詳細は資料請求後にご案内いたします</td>
+          </tr>
+          <tr>
+            <td>COA（成分分析証明書）</td>
+            <td class="placeholder">※ 詳細は資料請求後にご案内いたします</td>
+          </tr>
+          <tr>
+            <td>原料の出自</td>
+            <td class="placeholder">※ 詳細は資料請求後にご案内いたします</td>
+          </tr>
+          <tr>
+            <td>THCフリー確認</td>
+            <td>各ロットごとに検査を実施</td>
+          </tr>
+          <tr>
+            <td>供給体制</td>
+            <td class="placeholder">※ 詳細は資料請求後にご案内いたします</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="margin-top: 16px; font-size: 13px; color: var(--text-light);">
+        ※ 品質資料の詳細は、資料請求後にお送りいたします。
+      </p>
+    </div>
+  </section>
+
+  <!-- S4: 導入の流れ -->
+  <section class="section bg-green-light">
+    <div class="section-inner">
+      <p class="section-label">FLOW</p>
+      <h2 class="section-title">導入の流れ</h2>
+      <p class="section-lead">お問い合わせから導入まで、シンプルなステップでご案内します。</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num-wrap">
+            <div class="step-num">1</div>
+            <div class="step-line"></div>
+          </div>
+          <div class="step-body">
+            <h3>資料請求</h3>
+            <p>まずはWebフォームから資料をご請求ください。商品概要・品質情報・取引条件の概要をお送りします。</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num-wrap">
+            <div class="step-num">2</div>
+            <div class="step-line"></div>
+          </div>
+          <div class="step-body">
+            <h3>品質資料の確認</h3>
+            <p>COA・品質管理資料をお送りします。ご不明点やご質問はお気軽にお問い合わせください。</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num-wrap">
+            <div class="step-num">3</div>
+            <div class="step-line"></div>
+          </div>
+          <div class="step-body">
+            <h3>条件のすり合わせ</h3>
+            <p>卸条件・ロット数・納品スケジュールをご相談のうえ決定します。小ロットからの導入も可能です。</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num-wrap">
+            <div class="step-num">4</div>
+            <div class="step-line"></div>
+          </div>
+          <div class="step-body">
+            <h3>初回発注・導入</h3>
+            <p>院内販売用の説明資料とあわせて商品をお届けします。導入後のサポートも対応いたします。</p>
+          </div>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 48px;">
+        <a href="#contact" class="btn-green">品質資料・検査情報を問い合わせる</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- S5: 想定運用例 -->
+  <section class="section bg-white">
+    <div class="section-inner">
+      <p class="section-label">USE CASES</p>
+      <h2 class="section-title">想定運用例</h2>
+      <p class="section-lead">さまざまな医療機関・薬局で、ウェルネス商材としてご活用いただけます。</p>
+      <div class="usecase-cards">
+        <div class="usecase-card">
+          <div class="usecase-badge">&#127973;</div>
+          <div>
+            <h3>自由診療クリニック</h3>
+            <p>美容やコンディショニング領域の自由診療を行うクリニックで、休息やコンディションに関心のある患者さんへウェルネス商材として院内提案。自費メニューの選択肢として活用できます。</p>
+          </div>
+        </div>
+        <div class="usecase-card">
+          <div class="usecase-badge">&#128137;</div>
+          <div>
+            <h3>内科・心療内科クリニック</h3>
+            <p>睡眠や日々の体調に関する相談をきっかけに、セルフケア習慣のひとつとしてCBDカプセルをご案内。既存の診療の流れのなかで自然にご提案いただけます。</p>
+          </div>
+        </div>
+        <div class="usecase-card">
+          <div class="usecase-badge">&#128138;</div>
+          <div>
+            <h3>調剤薬局・漢方薬局</h3>
+            <p>健康相談の延長で、既存患者さんとの接点を活かし、ウェルネスカテゴリの取扱商材として棚に追加。相談型の販売に適した商材です。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S6: 商材ラインナップ -->
+  <section class="section bg-light">
+    <div class="section-inner">
+      <p class="section-label">LINEUP</p>
+      <h2 class="section-title">取扱商材ラインナップ</h2>
+      <p class="section-lead">医療機関・薬局での取り扱いを前提に設計された商品をご用意しています。</p>
+      <div class="lineup-grid">
+        <div class="lineup-card">
+          <div class="lineup-icon">&#128138;</div>
+          <h3>CBDカプセル</h3>
+          <div class="lineup-type">ソフトカプセル</div>
+          <p>定量摂取がしやすく、患者さんへの説明もシンプル。院内販売で最も扱いやすい形状です。</p>
+          <div class="lineup-spec">
+            <span class="placeholder">内容量・規格は資料請求後にご案内</span>
+          </div>
+        </div>
+        <div class="lineup-card">
+          <div class="lineup-icon">&#128167;</div>
+          <h3>CBDオイル</h3>
+          <div class="lineup-type">液状（スポイトタイプ）</div>
+          <p>用量の調整がしやすく、個々の患者さんに合わせた提案が可能。柔軟な使い方ができます。</p>
+          <div class="lineup-spec">
+            <span class="placeholder">内容量・規格は資料請求後にご案内</span>
+          </div>
+        </div>
+      </div>
+      <p style="margin-top: 24px; font-size: 13px; color: var(--text-light); text-align: center;">
+        ※ 卸条件・小ロット条件・PB/OEM対応については資料請求後にご案内いたします。
+      </p>
+    </div>
+  </section>
+
+  <!-- S7: FAQ -->
+  <section class="section bg-white">
+    <div class="section-inner">
+      <p class="section-label">FAQ</p>
+      <h2 class="section-title">よくあるご質問</h2>
+      <p class="section-lead">導入をご検討いただく際に、よくいただくご質問をまとめました。</p>
+      <div class="faq-list">
+        <div class="faq-item open">
+          <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">CBDとは何ですか？</div>
+          <div class="faq-a">CBDはカンナビジオールの略称で、麻由来の成分のひとつです。THC（精神活性成分）とは異なり、日本国内では健康食品として流通しています。当商品はTHCフリーであることを各ロットの検査で確認しています。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">院内で販売しても法的に問題ありませんか？</div>
+          <div class="faq-a">当商品は、日本の法規制に準拠した原料・製造工程で生産されています。詳細は品質資料・法規対応資料をお送りしますので、ご確認ください。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">患者さんにどう説明すればよいですか？</div>
+          <div class="faq-a">「睡眠や休息の質を意識したウェルネス習慣のひとつ」としてご案内いただくケースが多いです。院内説明用の資料もご用意していますので、そのままお使いいただけます。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">最低ロット数はどのくらいですか？</div>
+          <div class="faq-a">小ロットからの導入に対応しています。詳細な条件は資料請求後にご案内いたします。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">PB（プライベートブランド）やOEM対応は可能ですか？</div>
+          <div class="faq-a">対応可否・条件については個別にご相談を承っております。まずは資料請求フォームよりお問い合わせください。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">品質検査の内容を教えてください。</div>
+          <div class="faq-a">第三者検査機関による成分分析（COA）を取得しています。検査項目の詳細は品質資料にてご確認いただけます。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">導入までの期間はどのくらいですか？</div>
+          <div class="faq-a">資料請求から導入まで、条件のすり合わせを含め数週間程度が目安です。お急ぎの場合はご相談ください。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">卸価格や取引条件を教えてください。</div>
+          <div class="faq-a">医療機関向けの卸条件をご用意しています。詳細は資料請求後にご案内いたします。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S8: 最終CTA -->
+  <section class="final-cta" id="contact">
+    <h2>医療機関・薬局の皆さまへ</h2>
+    <p>導入検討に必要な情報を、まずは資料でご確認ください。<br>品質・条件・導入フロー、すべてを丁寧にご案内いたします。</p>
+    <div class="cta-buttons">
+      <a href="#" class="cta-btn">
+        <span class="cta-num">STEP 1</span>
+        <span class="cta-label">医療機関向け資料を請求する</span>
+        <span class="cta-desc">商品概要・品質情報・条件をお届け</span>
+      </a>
+      <a href="#" class="cta-btn">
+        <span class="cta-num">STEP 2</span>
+        <span class="cta-label">品質資料・検査情報を問い合わせる</span>
+        <span class="cta-desc">COA・検査項目の詳細をご確認</span>
+      </a>
+      <a href="#" class="cta-btn">
+        <span class="cta-num">STEP 3</span>
+        <span class="cta-label">導入相談をする</span>
+        <span class="cta-desc">条件・ロット・スケジュールをご相談</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; CBD Medical Supply. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
