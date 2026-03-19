@@ -631,6 +631,97 @@
       font-style: italic;
     }
 
+    /* ===== TRUST BADGES ===== */
+    .trust-badges {
+      background: var(--primary-dark);
+      padding: 16px 24px;
+      text-align: center;
+    }
+    .trust-badges-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .trust-badge {
+      display: inline-block;
+      border: 1px solid rgba(255,255,255,0.3);
+      color: rgba(255,255,255,0.9);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 12px;
+      letter-spacing: 0.05em;
+    }
+
+    /* ===== SCENE CARDS ===== */
+    .scene-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .scene-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 28px 24px;
+    }
+    .scene-num {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: 0.1em;
+      margin-bottom: 8px;
+    }
+    .scene-card h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 12px;
+    }
+    .scene-quote {
+      font-style: italic;
+      color: var(--primary);
+      font-size: 15px;
+      margin-bottom: 12px;
+      padding-left: 12px;
+      border-left: 3px solid var(--gold);
+    }
+    .scene-card p:last-child {
+      font-size: 13px;
+      color: var(--text-light);
+      line-height: 1.8;
+    }
+
+    /* ===== NUMBERS ===== */
+    .numbers-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      text-align: center;
+    }
+    .number-card {
+      background: var(--primary-light);
+      border-radius: 10px;
+      padding: 28px 16px;
+    }
+    .number-value {
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--primary-dark);
+      line-height: 1.2;
+    }
+    .number-unit {
+      font-size: 16px;
+      font-weight: 600;
+    }
+    .number-label {
+      font-size: 13px;
+      color: var(--text-light);
+      margin-top: 8px;
+    }
+
     /* ===== RESPONSIVE ===== */
     @media (max-width: 768px) {
       .fv { padding: 64px 20px 56px; }
@@ -647,6 +738,8 @@
       .cta-btn { min-width: 280px; }
       .quality-table td:first-child { width: auto; }
       .about-cbd-grid { grid-template-columns: 1fr; }
+      .scene-cards { grid-template-columns: 1fr; }
+      .numbers-grid { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
 </head>
@@ -663,19 +756,28 @@
   <!-- FIRST VIEW -->
   <section class="fv">
     <div class="fv-label">医療機関・薬局 向けご案内</div>
-    <h1><span>院内で提案できる、</span><br><span>品質資料つきのウェルネス商材。</span></h1>
+    <h1><span>自由診療クリニックの物販に、</span><br><span>月5〜15万円の新しい収益を。</span></h1>
     <p class="fv-sub">
-      CBDカプセル / CBDオイル ― 医療機関・薬局向けの導入をご支援します。<br>
-      品質資料完備。小ロット対応。導入フローも明確です。
+      睡眠・ストレスケアに関心のある患者さんへ。品質資料完備のCBDウェルネスサプリで、<br>院の信頼を守りながら、自然に提案できる物販の仕組みをつくります。
     </p>
     <div class="fv-points">
-      <div class="fv-point">品質資料完備</div>
-      <div class="fv-point">小ロット対応</div>
-      <div class="fv-point">院内説明資料あり</div>
-      <div class="fv-point">継続提案しやすい</div>
+      <div class="fv-point">院内販売で利益率60%以上</div>
+      <div class="fv-point">導入最短2週間</div>
+      <div class="fv-point">品質資料・COA完備</div>
+      <div class="fv-point">小ロット10個〜対応</div>
     </div>
-    <a href="#contact-form" class="btn-primary">医療機関向け資料を請求する</a>
+    <a href="#contact-form" class="btn-primary">まずは無料で資料を見る</a>
   </section>
+
+  <!-- 信頼バッジ -->
+  <div class="trust-badges">
+    <div class="trust-badges-inner">
+      <span class="trust-badge">✓ THCフリー検査済</span>
+      <span class="trust-badge">✓ COA全ロット発行</span>
+      <span class="trust-badge">✓ GMP準拠工場製造</span>
+      <span class="trust-badge">✓ 法令完全準拠</span>
+    </div>
+  </div>
 
   <!-- CBDとは？ -->
   <section class="section bg-white">
@@ -731,12 +833,68 @@
       <h2 class="section-title">こんなお悩みはありませんか？</h2>
       <p class="section-lead">院内販売や自由診療の現場で、こうした声が増えています。</p>
       <ul class="problem-list">
-        <li class="problem-item">自由診療や院内販売で扱える商材を探しているが、品質面で安心できるものが少ない</li>
-        <li class="problem-item">睡眠や休息に関する患者さんからの相談に、提案の選択肢が限られている</li>
-        <li class="problem-item">一般的なEC商材をそのまま院内で扱うのは、信用面で抵抗がある</li>
-        <li class="problem-item">取り扱いを検討したくても、品質資料が不十分な商材ばかりで判断できない</li>
-        <li class="problem-item">導入の手順やサポート体制が見えず、検討が前に進まない</li>
+        <li class="problem-item">患者さんから"よく眠れない""ストレスが…"と相談されるが、薬以外の提案が限られている</li>
+        <li class="problem-item">物販をやりたいが、院の看板に傷がつく商材は絶対に避けたい</li>
+        <li class="problem-item">ネット通販のサプリをそのまま院内で売るのは、信頼性の面で不安がある</li>
+        <li class="problem-item">品質資料が整っていない商材が多く、医療従事者として判断できない</li>
+        <li class="problem-item">導入方法やサポート体制が見えず、忙しい中で検討する時間がない</li>
       </ul>
+    </div>
+  </section>
+
+  <!-- 院内導入イメージ -->
+  <section class="section bg-light">
+    <div class="section-inner">
+      <p class="section-label">SCENE</p>
+      <h2 class="section-title">こんなふうに、院内で自然に提案できます</h2>
+      <p class="section-lead">押し売りではなく、患者さんの相談の流れで自然にご提案いただけます。</p>
+      <div class="scene-cards">
+        <div class="scene-card">
+          <div class="scene-num">SCENE 1</div>
+          <h3>診察時</h3>
+          <p class="scene-quote">「最近よく眠れなくて…」</p>
+          <p>睡眠や休息の相談をきっかけに、セルフケアの一つとしてご案内。「こういうものもありますよ」と自然にお伝えいただけます。</p>
+        </div>
+        <div class="scene-card">
+          <div class="scene-num">SCENE 2</div>
+          <h3>受付・会計時</h3>
+          <p class="scene-quote">「あ、これ何ですか？」</p>
+          <p>受付に商品とリーフレットを設置するだけ。興味を持った患者さんが自分から手に取ります。スタッフの説明負荷もほとんどありません。</p>
+        </div>
+        <div class="scene-card">
+          <div class="scene-num">SCENE 3</div>
+          <h3>継続・リピート</h3>
+          <p class="scene-quote">「前回のあれ、また買えますか？」</p>
+          <p>気に入った患者さんが来院ごとにリピート購入。月5〜15万円の物販売上が自然と積み上がっていきます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 数字で見る導入メリット -->
+  <section class="section bg-white">
+    <div class="section-inner">
+      <p class="section-label">NUMBERS</p>
+      <h2 class="section-title">数字で見る導入メリット</h2>
+      <div class="numbers-grid">
+        <div class="number-card">
+          <div class="number-value">60<span class="number-unit">%以上</span></div>
+          <div class="number-label">利益率の目安</div>
+        </div>
+        <div class="number-card">
+          <div class="number-value">5〜15<span class="number-unit">万円/月</span></div>
+          <div class="number-label">想定物販売上</div>
+        </div>
+        <div class="number-card">
+          <div class="number-value">2<span class="number-unit">週間〜</span></div>
+          <div class="number-label">導入までの期間</div>
+        </div>
+        <div class="number-card">
+          <div class="number-value">10<span class="number-unit">個〜</span></div>
+          <div class="number-label">最小ロット</div>
+        </div>
+      </div>
+      <p style="text-align:center; font-size:12px; color:var(--text-light); margin-top:16px;">※ 想定値です。導入規模・患者層により異なります。</p>
     </div>
   </section>
 
@@ -818,6 +976,9 @@
       <p style="margin-top: 16px; font-size: 13px; color: var(--text-light);">
         ※ 品質資料の詳細は、資料請求後にお送りいたします。
       </p>
+      <div style="text-align:center; margin-top:32px;">
+        <a href="#contact-form" style="color:var(--primary); font-size:14px; text-decoration:underline; text-underline-offset:4px;">まずは無料で資料を見る →</a>
+      </div>
     </div>
   </section>
 
@@ -871,6 +1032,9 @@
       </div>
       <div style="text-align: center; margin-top: 48px;">
         <a href="#contact-form" class="btn-green">品質資料・検査情報を問い合わせる</a>
+      </div>
+      <div style="text-align:center; margin-top:32px;">
+        <a href="#contact-form" style="color:var(--primary); font-size:14px; text-decoration:underline; text-underline-offset:4px;">まずは無料で資料を見る →</a>
       </div>
     </div>
   </section>
@@ -963,6 +1127,9 @@
       <p style="margin-top: 24px; font-size: 13px; color: var(--text-light); text-align: center;">
         ※ 卸条件・小ロット条件・PB/OEM対応については資料請求後にご案内いたします。
       </p>
+      <div style="text-align:center; margin-top:32px;">
+        <a href="#contact-form" style="color:var(--primary); font-size:14px; text-decoration:underline; text-underline-offset:4px;">まずは無料で資料を見る →</a>
+      </div>
     </div>
   </section>
 
@@ -1011,8 +1178,8 @@
 
   <!-- S8: 最終CTA -->
   <section class="final-cta" id="contact">
-    <h2>医療機関・薬局の皆さまへ</h2>
-    <p>導入検討に必要な情報を、まずは資料でご確認ください。<br>品質・条件・導入フロー、すべてを丁寧にご案内いたします。</p>
+    <h2>無料の導入資料をお送りします</h2>
+    <p>品質資料・卸条件・導入フローが全てわかる資料を、無料でお届けします。<br>営業電話は一切いたしません。</p>
     <div class="cta-buttons">
       <a href="#contact-form" class="cta-btn">
         <span class="cta-num">STEP 1</span>
