@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>医療機関・薬局向け CBDカプセル / CBDオイル 導入のご案内</title>
+  <title>自由診療クリニックの物販に、月5〜15万円の新しい収益を | CBD Medical Supply</title>
   <style>
     :root {
       --primary: #1a5632;
@@ -63,6 +63,42 @@
     }
     .header-cta:hover { background: var(--primary-dark); }
 
+    /* ===== TRUST BADGES ===== */
+    .trust-badges {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding: 16px 24px;
+      background: var(--primary-light);
+    }
+    .trust-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: 1.5px solid var(--primary);
+      border-radius: 20px;
+      padding: 6px 14px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      background: var(--white);
+      white-space: nowrap;
+    }
+    .trust-badge::before {
+      content: "\2713";
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 18px;
+      height: 18px;
+      background: var(--primary);
+      color: var(--white);
+      border-radius: 50%;
+      font-size: 11px;
+      flex-shrink: 0;
+    }
+
     /* ===== FIRST VIEW ===== */
     .fv {
       background: linear-gradient(160deg, var(--primary-dark) 0%, var(--primary) 50%, var(--accent) 100%);
@@ -100,7 +136,7 @@
     .fv-points {
       display: flex;
       justify-content: center;
-      gap: 24px;
+      gap: 16px;
       flex-wrap: wrap;
       margin-bottom: 48px;
     }
@@ -111,6 +147,9 @@
       padding: 10px 20px;
       font-size: 14px;
       font-weight: 600;
+    }
+    .fv-point strong {
+      color: #ffd700;
     }
     .btn-primary {
       display: inline-block;
@@ -127,6 +166,12 @@
     .btn-primary:hover {
       transform: translateY(-2px);
       box-shadow: 0 6px 24px rgba(0,0,0,0.2);
+    }
+    .btn-sub-note {
+      display: block;
+      margin-top: 12px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.7);
     }
     .btn-green {
       display: inline-block;
@@ -162,6 +207,33 @@
     .btn-outline:hover {
       background: var(--primary);
       color: var(--white);
+    }
+
+    /* ===== MID CTA ===== */
+    .mid-cta {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 24px;
+    }
+    .mid-cta-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--primary);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 10px 24px;
+      border: 1.5px solid var(--primary);
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .mid-cta-link:hover {
+      background: var(--primary);
+      color: var(--white);
+    }
+    .mid-cta-link::after {
+      content: "\2192";
     }
 
     /* ===== SECTIONS ===== */
@@ -229,6 +301,62 @@
       justify-content: center;
       font-size: 13px;
       font-weight: 700;
+    }
+
+    /* ===== SCENE CARDS ===== */
+    .scene-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .scene-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 32px 24px;
+      text-align: center;
+      position: relative;
+    }
+    .scene-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      background: var(--primary);
+      color: var(--white);
+      border-radius: 50%;
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+    .scene-card h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 12px;
+    }
+    .scene-card .scene-dialogue {
+      font-size: 14px;
+      color: var(--text);
+      background: var(--gold-light);
+      border-left: 3px solid var(--gold);
+      padding: 12px 16px;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 12px;
+      text-align: left;
+      line-height: 1.7;
+      font-style: italic;
+    }
+    .scene-card p {
+      font-size: 14px;
+      color: var(--text-light);
+      line-height: 1.7;
+      text-align: left;
+    }
+    .scene-arrow {
+      display: none;
     }
 
     /* ===== VALUE CARDS ===== */
@@ -631,6 +759,40 @@
       font-style: italic;
     }
 
+    /* ===== NUMBERS HIGHLIGHT ===== */
+    .numbers-bar {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 48px;
+    }
+    .numbers-bar-item {
+      text-align: center;
+      padding: 28px 16px;
+      border-right: 1px solid var(--border);
+    }
+    .numbers-bar-item:last-child {
+      border-right: none;
+    }
+    .numbers-bar-item .num-value {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1.2;
+    }
+    .numbers-bar-item .num-value span {
+      font-size: 16px;
+    }
+    .numbers-bar-item .num-label {
+      font-size: 12px;
+      color: var(--text-light);
+      margin-top: 4px;
+    }
+
     /* ===== RESPONSIVE ===== */
     @media (max-width: 768px) {
       .fv { padding: 64px 20px 56px; }
@@ -647,6 +809,13 @@
       .cta-btn { min-width: 280px; }
       .quality-table td:first-child { width: auto; }
       .about-cbd-grid { grid-template-columns: 1fr; }
+      .trust-badges { gap: 8px; padding: 12px 16px; }
+      .trust-badge { font-size: 11px; padding: 5px 10px; }
+      .scene-cards { grid-template-columns: 1fr; gap: 16px; }
+      .numbers-bar { grid-template-columns: repeat(2, 1fr); }
+      .numbers-bar-item:nth-child(2) { border-right: none; }
+      .numbers-bar-item:nth-child(1),
+      .numbers-bar-item:nth-child(2) { border-bottom: 1px solid var(--border); }
     }
   </style>
 </head>
@@ -656,29 +825,119 @@
   <header class="header">
     <div class="header-inner">
       <div class="header-logo">CBD Medical Supply</div>
-      <a href="#contact-form" class="header-cta">資料請求</a>
+      <a href="#contact-form" class="header-cta">まずは無料で資料を見る</a>
     </div>
   </header>
 
+  <!-- TRUST BADGES -->
+  <div class="trust-badges">
+    <span class="trust-badge">THCフリー検査済</span>
+    <span class="trust-badge">COA（成分分析証明書）全ロット発行</span>
+    <span class="trust-badge">GMP準拠工場製造</span>
+    <span class="trust-badge">法令完全準拠</span>
+  </div>
+
   <!-- FIRST VIEW -->
   <section class="fv">
-    <div class="fv-label">医療機関・薬局 向けご案内</div>
-    <h1><span>院内で提案できる、</span><br><span>品質資料つきのウェルネス商材。</span></h1>
+    <div class="fv-label">自由診療クリニック・薬局 向けご案内</div>
+    <h1><span>自由診療クリニックの物販に、</span><br><span>月5〜15万円の新しい収益を。</span></h1>
     <p class="fv-sub">
-      CBDカプセル / CBDオイル ― 医療機関・薬局向けの導入をご支援します。<br>
-      品質資料完備。小ロット対応。導入フローも明確です。
+      睡眠・ストレスケアに関心のある患者さんへ。品質資料完備のCBDウェルネスサプリメントで、<br>
+      院の信頼を守りながら、自然に提案できる物販の仕組みをつくります。
     </p>
     <div class="fv-points">
-      <div class="fv-point">品質資料完備</div>
-      <div class="fv-point">小ロット対応</div>
-      <div class="fv-point">院内説明資料あり</div>
-      <div class="fv-point">継続提案しやすい</div>
+      <div class="fv-point">院内販売で<strong>利益率60%以上</strong></div>
+      <div class="fv-point">導入<strong>最短2週間</strong></div>
+      <div class="fv-point">品質資料・COA完備</div>
+      <div class="fv-point">小ロット<strong>10個〜</strong>対応</div>
     </div>
-    <a href="#contact-form" class="btn-primary">医療機関向け資料を請求する</a>
+    <a href="#contact-form" class="btn-primary">まずは無料で資料を見る</a>
+    <span class="btn-sub-note">※ 営業電話は一切いたしません</span>
+  </section>
+
+  <!-- S1: 課題提起 -->
+  <section class="section bg-white">
+    <div class="section-inner">
+      <p class="section-label">CHALLENGES</p>
+      <h2 class="section-title">こんなお悩みはありませんか？</h2>
+      <p class="section-lead">自由診療クリニックの院長先生から、こうした声をよくいただきます。</p>
+      <ul class="problem-list">
+        <li class="problem-item">患者さんから「睡眠」や「ストレスケア」の相談を受けるが、薬以外の提案が限られている</li>
+        <li class="problem-item">物販で売上を増やしたいが、院の看板に傷がつく商材は絶対に避けたい</li>
+        <li class="problem-item">EC上のサプリをそのまま院内で売るのは、信頼性の面で不安がある</li>
+        <li class="problem-item">品質資料が不十分な商材ばかりで、院長として責任を持って勧められない</li>
+        <li class="problem-item">物販を始めたいが、仕入れや在庫管理が面倒そうで手が出せない</li>
+      </ul>
+      <div class="mid-cta">
+        <a href="#contact-form" class="mid-cta-link">これらの悩みを解決する資料を見る</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 院内導入イメージ -->
+  <section class="section bg-green-light">
+    <div class="section-inner">
+      <p class="section-label">HOW IT WORKS</p>
+      <h2 class="section-title">こんなふうに、院内で自然に提案できます</h2>
+      <p class="section-lead">特別なオペレーションは不要。日常の診療の流れの中で、自然に物販売上が生まれます。</p>
+      <div class="scene-cards">
+        <div class="scene-card">
+          <div class="scene-num">SCENE<br>1</div>
+          <h3>診察時</h3>
+          <div class="scene-dialogue">「最近よく眠れない」という患者さんに、「セルフケアの一つとして、こういうものもあります」とご案内。</div>
+          <p>医師の言葉で提案するから、患者さんも安心して受け入れやすい。院内説明資料もご用意しています。</p>
+        </div>
+        <div class="scene-card">
+          <div class="scene-num">SCENE<br>2</div>
+          <h3>会計時</h3>
+          <div class="scene-dialogue">受付に商品とリーフレットを設置。興味を持った患者さんが自分から手に取る。</div>
+          <p>押し売り感ゼロ。スタッフの負担もかからず、患者さんの自然な関心から購入につながります。</p>
+        </div>
+        <div class="scene-card">
+          <div class="scene-num">SCENE<br>3</div>
+          <h3>継続</h3>
+          <div class="scene-dialogue">気に入った患者さんが来院ごとにリピート購入。月5〜15万円の物販売上が自然に積み上がる。</div>
+          <p>一度気に入れば、来院のたびに購入。利益率60%以上で、安定した収益の柱になります。</p>
+        </div>
+      </div>
+      <div class="mid-cta">
+        <a href="#contact-form" class="mid-cta-link">導入の詳細を資料で確認する</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 数字で見る導入メリット -->
+  <section class="section bg-white">
+    <div class="section-inner">
+      <p class="section-label">NUMBERS</p>
+      <h2 class="section-title">数字で見る導入メリット</h2>
+      <p class="section-lead">具体的な数字で、導入後のイメージをお伝えします。</p>
+      <div class="numbers-bar">
+        <div class="numbers-bar-item">
+          <div class="num-value">60<span>%以上</span></div>
+          <div class="num-label">利益率の目安</div>
+        </div>
+        <div class="numbers-bar-item">
+          <div class="num-value">5〜15<span>万円/月</span></div>
+          <div class="num-label">月間売上イメージ</div>
+        </div>
+        <div class="numbers-bar-item">
+          <div class="num-value">2<span>週間〜</span></div>
+          <div class="num-label">最短導入期間</div>
+        </div>
+        <div class="numbers-bar-item">
+          <div class="num-value">10<span>個〜</span></div>
+          <div class="num-label">最小ロット数</div>
+        </div>
+      </div>
+      <p style="font-size: 13px; color: var(--text-light); text-align: center; margin-top: -32px;">
+        ※ 売上イメージは導入規模・患者数により異なります。詳細は資料にてご案内します。
+      </p>
+    </div>
   </section>
 
   <!-- CBDとは？ -->
-  <section class="section bg-white">
+  <section class="section bg-light">
     <div class="section-inner">
       <p class="section-label">ABOUT CBD</p>
       <h2 class="section-title">CBDとは？ ― 医療機関で扱うウェルネス商材</h2>
@@ -721,27 +980,14 @@
           <p>日本国内のCBD市場は年々拡大中。特に健康意識の高い層を中心に関心が高まっており、医療機関が取り扱うことで患者さんの信頼度も向上します。</p>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- S1: 課題提起 -->
-  <section class="section bg-white">
-    <div class="section-inner">
-      <p class="section-label">CHALLENGES</p>
-      <h2 class="section-title">こんなお悩みはありませんか？</h2>
-      <p class="section-lead">院内販売や自由診療の現場で、こうした声が増えています。</p>
-      <ul class="problem-list">
-        <li class="problem-item">自由診療や院内販売で扱える商材を探しているが、品質面で安心できるものが少ない</li>
-        <li class="problem-item">睡眠や休息に関する患者さんからの相談に、提案の選択肢が限られている</li>
-        <li class="problem-item">一般的なEC商材をそのまま院内で扱うのは、信用面で抵抗がある</li>
-        <li class="problem-item">取り扱いを検討したくても、品質資料が不十分な商材ばかりで判断できない</li>
-        <li class="problem-item">導入の手順やサポート体制が見えず、検討が前に進まない</li>
-      </ul>
+      <div class="mid-cta">
+        <a href="#contact-form" class="mid-cta-link">CBD商材の詳しい資料を見る</a>
+      </div>
     </div>
   </section>
 
   <!-- S2: 提供価値 -->
-  <section class="section bg-light">
+  <section class="section bg-white">
     <div class="section-inner">
       <p class="section-label">WHY CBD MEDICAL SUPPLY</p>
       <h2 class="section-title">院内販売の新しい選択肢として</h2>
@@ -764,7 +1010,7 @@
         <div class="value-card">
           <div class="value-icon">&#128260;</div>
           <h3>継続提案しやすい</h3>
-          <p>日常的に取り入れるウェルネス商材として設計。リピート購入につながりやすい商品特性です。</p>
+          <p>日常的に取り入れるウェルネス商材として設計。利益率60%以上でリピート購入につながりやすい商品特性です。</p>
         </div>
         <div class="value-card">
           <div class="value-icon">&#128737;</div>
@@ -772,11 +1018,14 @@
           <p>品質管理体制・原料トレーサビリティを明示。院の信用を守りながら取り扱えます。</p>
         </div>
       </div>
+      <div class="mid-cta">
+        <a href="#contact-form" class="mid-cta-link">導入の詳細資料を請求する</a>
+      </div>
     </div>
   </section>
 
   <!-- S3: 品質管理 -->
-  <section class="section bg-white">
+  <section class="section bg-light">
     <div class="section-inner">
       <p class="section-label">QUALITY ASSURANCE</p>
       <h2 class="section-title">品質管理体制・検査情報</h2>
@@ -811,7 +1060,7 @@
           </tr>
           <tr>
             <td>供給体制</td>
-            <td>安定した供給体制を確保。小ロット発注にも対応</td>
+            <td>安定した供給体制を確保。小ロット10個〜の発注にも対応</td>
           </tr>
         </tbody>
       </table>
@@ -825,7 +1074,7 @@
   <section class="section bg-green-light">
     <div class="section-inner">
       <p class="section-label">FLOW</p>
-      <h2 class="section-title">導入の流れ</h2>
+      <h2 class="section-title">導入の流れ ― 最短2週間で院内販売スタート</h2>
       <p class="section-lead">お問い合わせから導入まで、シンプルなステップでご案内します。</p>
       <div class="steps">
         <div class="step">
@@ -834,8 +1083,8 @@
             <div class="step-line"></div>
           </div>
           <div class="step-body">
-            <h3>資料請求</h3>
-            <p>まずはWebフォームから資料をご請求ください。商品概要・品質情報・取引条件の概要をお送りします。</p>
+            <h3>資料請求（無料）</h3>
+            <p>まずはWebフォームから資料をご請求ください。商品概要・品質情報・取引条件の概要をお送りします。営業電話は一切ありません。</p>
           </div>
         </div>
         <div class="step">
@@ -855,7 +1104,7 @@
           </div>
           <div class="step-body">
             <h3>条件のすり合わせ</h3>
-            <p>卸条件・ロット数・納品スケジュールをご相談のうえ決定します。小ロットからの導入も可能です。</p>
+            <p>卸条件・ロット数・納品スケジュールをご相談のうえ決定します。小ロット10個〜の導入も可能です。</p>
           </div>
         </div>
         <div class="step">
@@ -864,13 +1113,13 @@
             <div class="step-line"></div>
           </div>
           <div class="step-body">
-            <h3>初回発注・導入</h3>
+            <h3>初回発注・導入（最短2週間）</h3>
             <p>院内販売用の説明資料とあわせて商品をお届けします。導入後のサポートも対応いたします。</p>
           </div>
         </div>
       </div>
       <div style="text-align: center; margin-top: 48px;">
-        <a href="#contact-form" class="btn-green">品質資料・検査情報を問い合わせる</a>
+        <a href="#contact-form" class="btn-green">まずは無料で資料を見る</a>
       </div>
     </div>
   </section>
@@ -886,7 +1135,7 @@
           <div class="usecase-badge">&#127973;</div>
           <div>
             <h3>自由診療クリニック</h3>
-            <p>美容やコンディショニング領域の自由診療を行うクリニックで、休息やコンディションに関心のある患者さんへウェルネス商材として院内提案。自費メニューの選択肢として活用できます。</p>
+            <p>美容やコンディショニング領域の自由診療を行うクリニックで、休息やコンディションに関心のある患者さんへウェルネス商材として院内提案。利益率60%以上の物販メニューとして活用できます。</p>
           </div>
         </div>
         <div class="usecase-card">
@@ -903,6 +1152,9 @@
             <p>健康相談の延長で、既存患者さんとの接点を活かし、ウェルネスカテゴリの取扱商材として棚に追加。相談型の販売に適した商材です。</p>
           </div>
         </div>
+      </div>
+      <div class="mid-cta">
+        <a href="#contact-form" class="mid-cta-link">自院での導入イメージを相談する</a>
       </div>
     </div>
   </section>
@@ -924,7 +1176,7 @@
               <circle cx="60" cy="75" r="6" fill="#8b7a3e" opacity="0.15"/>
             </svg>
           </div>
-          <div class="lineup-icon">💊</div>
+          <div class="lineup-icon">&#128138;</div>
           <h3>CBDカプセル</h3>
           <div class="lineup-type">ソフトカプセル</div>
           <p>1日1〜2粒を目安に服用。味や匂いがなく、患者さんが最も抵抗なく取り入れやすい形態です。定量摂取できるため、院内での説明もシンプル。「まずはこちらから」とおすすめしやすい商品です。</p>
@@ -932,8 +1184,8 @@
             <div class="spec-row"><span class="spec-label">形状</span><span>ソフトカプセル</span></div>
             <div class="spec-row"><span class="spec-label">内容量</span><span>30粒入り（約1ヶ月分）</span></div>
             <div class="spec-row"><span class="spec-label">CBD含有量</span><span>1粒あたり10〜25mg</span></div>
-            <div class="spec-row"><span class="spec-label">卸価格</span><span class="price-tbd">後日掲載</span></div>
-            <div class="spec-row"><span class="spec-label">想定院内販売価格</span><span class="price-tbd">後日掲載</span></div>
+            <div class="spec-row"><span class="spec-label">卸価格</span><span class="price-tbd">資料にてご案内</span></div>
+            <div class="spec-row"><span class="spec-label">想定院内販売価格</span><span class="price-tbd">資料にてご案内</span></div>
           </div>
         </div>
         <div class="lineup-card">
@@ -947,7 +1199,7 @@
               <circle cx="60" cy="4" r="2" fill="#1a5632" opacity="0.3"/>
             </svg>
           </div>
-          <div class="lineup-icon">💧</div>
+          <div class="lineup-icon">&#128167;</div>
           <h3>CBDオイル</h3>
           <div class="lineup-type">液状（スポイトタイプ）</div>
           <p>舌下に数滴垂らして使用。患者さんごとに用量を調整でき、個別対応がしやすい形態です。ウェルネス志向の患者さんへの提案に適しています。</p>
@@ -955,13 +1207,13 @@
             <div class="spec-row"><span class="spec-label">形状</span><span>スポイト付きガラスボトル</span></div>
             <div class="spec-row"><span class="spec-label">内容量</span><span>30ml（約1ヶ月分）</span></div>
             <div class="spec-row"><span class="spec-label">CBD含有量</span><span>500mg〜1000mg / 本</span></div>
-            <div class="spec-row"><span class="spec-label">卸価格</span><span class="price-tbd">後日掲載</span></div>
-            <div class="spec-row"><span class="spec-label">想定院内販売価格</span><span class="price-tbd">後日掲載</span></div>
+            <div class="spec-row"><span class="spec-label">卸価格</span><span class="price-tbd">資料にてご案内</span></div>
+            <div class="spec-row"><span class="spec-label">想定院内販売価格</span><span class="price-tbd">資料にてご案内</span></div>
           </div>
         </div>
       </div>
       <p style="margin-top: 24px; font-size: 13px; color: var(--text-light); text-align: center;">
-        ※ 卸条件・小ロット条件・PB/OEM対応については資料請求後にご案内いたします。
+        ※ 卸条件・小ロット条件（10個〜）・PB/OEM対応については資料請求後にご案内いたします。
       </p>
     </div>
   </section>
@@ -987,7 +1239,15 @@
         </div>
         <div class="faq-item">
           <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">最低ロット数はどのくらいですか？</div>
-          <div class="faq-a">小ロットからの導入に対応しています。詳細な条件は資料請求後にご案内いたします。</div>
+          <div class="faq-a">10個からの小ロット導入に対応しています。詳細な条件は資料請求後にご案内いたします。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">導入までの期間はどのくらいですか？</div>
+          <div class="faq-a">資料請求から導入まで、最短2週間が目安です。条件のすり合わせを含め、スムーズに進められるようサポートいたします。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">利益率はどのくらいですか？</div>
+          <div class="faq-a">院内販売の場合、利益率60%以上を想定しています。月5〜15万円の売上が見込めます（導入規模による）。詳細は資料にてご案内します。</div>
         </div>
         <div class="faq-item">
           <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">PB（プライベートブランド）やOEM対応は可能ですか？</div>
@@ -995,34 +1255,29 @@
         </div>
         <div class="faq-item">
           <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">品質検査の内容を教えてください。</div>
-          <div class="faq-a">第三者検査機関による成分分析（COA）を取得しています。検査項目の詳細は品質資料にてご確認いただけます。</div>
+          <div class="faq-a">第三者検査機関による成分分析（COA）を全ロットで取得しています。THCフリーの確認も各ロットごとに実施。検査項目の詳細は品質資料にてご確認いただけます。</div>
         </div>
-        <div class="faq-item">
-          <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">導入までの期間はどのくらいですか？</div>
-          <div class="faq-a">資料請求から導入まで、条件のすり合わせを含め数週間程度が目安です。お急ぎの場合はご相談ください。</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">卸価格や取引条件を教えてください。</div>
-          <div class="faq-a">医療機関向けの卸条件をご用意しています。詳細は資料請求後にご案内いたします。</div>
-        </div>
+      </div>
+      <div class="mid-cta">
+        <a href="#contact-form" class="mid-cta-link">その他のご質問も資料でご確認いただけます</a>
       </div>
     </div>
   </section>
 
   <!-- S8: 最終CTA -->
   <section class="final-cta" id="contact">
-    <h2>医療機関・薬局の皆さまへ</h2>
-    <p>導入検討に必要な情報を、まずは資料でご確認ください。<br>品質・条件・導入フロー、すべてを丁寧にご案内いたします。</p>
+    <h2>まずは無料の導入資料をご覧ください</h2>
+    <p>商品概要・品質資料・利益シミュレーション・導入フローをまとめた資料をお届けします。<br>営業電話は一切いたしません。まずは資料で、貴院に合うかご判断ください。</p>
     <div class="cta-buttons">
       <a href="#contact-form" class="cta-btn">
         <span class="cta-num">STEP 1</span>
-        <span class="cta-label">医療機関向け資料を請求する</span>
-        <span class="cta-desc">商品概要・品質情報・条件をお届け</span>
+        <span class="cta-label">無料の導入資料を受け取る</span>
+        <span class="cta-desc">営業電話なし・3分で完了</span>
       </a>
       <a href="#contact-form" class="cta-btn">
         <span class="cta-num">STEP 2</span>
-        <span class="cta-label">品質資料・検査情報を問い合わせる</span>
-        <span class="cta-desc">COA・検査項目の詳細をご確認</span>
+        <span class="cta-label">品質資料・検査情報を確認する</span>
+        <span class="cta-desc">COA・検査項目の詳細をお届け</span>
       </a>
       <a href="#contact-form" class="cta-btn">
         <span class="cta-num">STEP 3</span>
@@ -1035,8 +1290,8 @@
   <!-- CONTACT FORM -->
   <section class="section bg-white" id="contact-form">
     <div class="section-inner">
-      <h2 class="section-title" style="text-align:center;">お問い合わせ・資料請求</h2>
-      <p class="section-lead" style="text-align:center; margin: 0 auto 32px;">以下のフォームよりお気軽にお問い合わせください。</p>
+      <h2 class="section-title" style="text-align:center;">無料の導入資料を受け取る</h2>
+      <p class="section-lead" style="text-align:center; margin: 0 auto 32px;">以下のフォームにご入力ください。営業電話は一切いたしません。</p>
       <div style="max-width:520px; margin:0 auto; background:var(--bg); border-radius:16px; padding:36px 32px; box-shadow:0 2px 12px rgba(0,0,0,0.04);">
         <form onsubmit="event.preventDefault(); alert('送信ありがとうございます。（※デモ用のため実際には送信されません）');">
           <div style="margin-bottom:16px;">
@@ -1071,8 +1326,8 @@
             <label style="display:block; font-size:13px; color:var(--text-light); margin-bottom:4px; font-weight:600;">ご質問・ご要望</label>
             <textarea placeholder="お気軽にご記入ください" style="width:100%; padding:10px 14px; border:1px solid var(--border); border-radius:6px; font-size:14px; min-height:80px; resize:vertical;"></textarea>
           </div>
-          <button type="submit" class="btn-green" style="width:100%; font-size:15px;">資料を請求する</button>
-          <p style="text-align:center; font-size:12px; color:var(--text-light); margin-top:10px;">※ 営業電話は一切いたしません</p>
+          <button type="submit" class="btn-green" style="width:100%; font-size:15px;">無料の導入資料を受け取る（営業電話なし）</button>
+          <p style="text-align:center; font-size:12px; color:var(--text-light); margin-top:10px;">※ 3分で完了します。営業電話は一切いたしません。</p>
         </form>
       </div>
     </div>
