@@ -569,6 +569,68 @@
       font-size: 12px;
     }
 
+    /* ===== ABOUT CBD ===== */
+    .about-cbd-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .about-cbd-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 28px 24px;
+      text-align: center;
+    }
+    .about-cbd-icon {
+      margin-bottom: 16px;
+    }
+    .about-cbd-card h3 {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--primary-dark);
+    }
+    .about-cbd-card p {
+      font-size: 13px;
+      color: var(--text-light);
+      line-height: 1.8;
+      text-align: left;
+    }
+
+    /* ===== LINEUP VISUAL ===== */
+    .lineup-visual {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 0;
+      background: linear-gradient(135deg, #f7f9f7 0%, #e8f5ed 100%);
+      border-radius: 10px 10px 0 0;
+      margin: -32px -28px 20px;
+    }
+    .lineup-spec-detail {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+    .spec-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 6px 0;
+      font-size: 13px;
+      border-bottom: 1px dotted #e8e8e8;
+    }
+    .spec-row:last-child { border-bottom: none; }
+    .spec-label {
+      color: var(--text-light);
+      font-weight: 600;
+    }
+    .price-tbd {
+      color: var(--gold);
+      font-weight: 600;
+      font-style: italic;
+    }
+
     /* ===== RESPONSIVE ===== */
     @media (max-width: 768px) {
       .fv { padding: 64px 20px 56px; }
@@ -584,6 +646,7 @@
       .cta-buttons { flex-direction: column; align-items: center; }
       .cta-btn { min-width: 280px; }
       .quality-table td:first-child { width: auto; }
+      .about-cbd-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -593,7 +656,7 @@
   <header class="header">
     <div class="header-inner">
       <div class="header-logo">CBD Medical Supply</div>
-      <a href="#contact" class="header-cta">資料請求</a>
+      <a href="#contact-form" class="header-cta">資料請求</a>
     </div>
   </header>
 
@@ -611,7 +674,54 @@
       <div class="fv-point">院内説明資料あり</div>
       <div class="fv-point">継続提案しやすい</div>
     </div>
-    <a href="#contact" class="btn-primary">医療機関向け資料を請求する</a>
+    <a href="#contact-form" class="btn-primary">医療機関向け資料を請求する</a>
+  </section>
+
+  <!-- CBDとは？ -->
+  <section class="section bg-white">
+    <div class="section-inner">
+      <p class="section-label">ABOUT CBD</p>
+      <h2 class="section-title">CBDとは？ ― 医療機関で扱うウェルネス商材</h2>
+      <p class="section-lead">
+        CBD（カンナビジオール）は、麻（ヘンプ）から抽出される天然由来の成分です。<br>
+        精神活性作用のあるTHCとは異なり、日本国内では健康食品として合法的に流通しています。<br>
+        欧米では医療・ウェルネス領域で幅広く研究が進み、セルフケア商材として定着しつつあります。
+      </p>
+      <div class="about-cbd-grid">
+        <div class="about-cbd-card">
+          <div class="about-cbd-icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+              <circle cx="24" cy="24" r="20" fill="#e8f5ed" stroke="#1a5632" stroke-width="1.5"/>
+              <path d="M24 12c-2 4-6 6-6 12s4 12 6 12 6-6 6-12-4-8-6-12z" fill="#1a5632" opacity="0.2"/>
+              <path d="M18 24h12M24 18v12" stroke="#1a5632" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>天然由来の植物成分</h3>
+          <p>ヘンプ（産業用大麻）の茎や種子から抽出。THC（精神活性成分）を含まず、依存性もありません。WHO（世界保健機関）も安全性プロファイルを報告しています。</p>
+        </div>
+        <div class="about-cbd-card">
+          <div class="about-cbd-icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+              <circle cx="24" cy="24" r="20" fill="#e8f5ed" stroke="#1a5632" stroke-width="1.5"/>
+              <rect x="16" y="20" width="16" height="10" rx="5" fill="#1a5632" opacity="0.2"/>
+              <rect x="18" y="22" width="12" height="6" rx="3" stroke="#1a5632" stroke-width="1.5" fill="none"/>
+            </svg>
+          </div>
+          <h3>カプセル・オイルで手軽に</h3>
+          <p>患者さんが日常的に取り入れやすいカプセルタイプと、用量調整しやすいオイルタイプの2形態。院内の説明も「1日1〜2粒を目安に」とシンプルです。</p>
+        </div>
+        <div class="about-cbd-card">
+          <div class="about-cbd-icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+              <circle cx="24" cy="24" r="20" fill="#e8f5ed" stroke="#1a5632" stroke-width="1.5"/>
+              <path d="M16 28l4-8 4 4 4-10 4 6" stroke="#1a5632" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>国内市場の成長分野</h3>
+          <p>日本国内のCBD市場は年々拡大中。特に健康意識の高い層を中心に関心が高まっており、医療機関が取り扱うことで患者さんの信頼度も向上します。</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- S1: 課題提起 -->
@@ -681,27 +791,27 @@
         <tbody>
           <tr>
             <td>品質管理体制</td>
-            <td class="placeholder">※ 詳細は資料請求後にご案内いたします</td>
+            <td>GMP基準に準拠した管理体制で製造（詳細は資料にてご案内）</td>
           </tr>
           <tr>
             <td>第三者検査機関</td>
-            <td class="placeholder">※ 詳細は資料請求後にご案内いたします</td>
+            <td>国内外の第三者機関にて成分分析を実施（機関名は資料にてご案内）</td>
           </tr>
           <tr>
             <td>COA（成分分析証明書）</td>
-            <td class="placeholder">※ 詳細は資料請求後にご案内いたします</td>
+            <td>全ロットごとに発行。CBD含有量・THC不検出を証明</td>
           </tr>
           <tr>
             <td>原料の出自</td>
-            <td class="placeholder">※ 詳細は資料請求後にご案内いたします</td>
+            <td>米国・欧州産のオーガニックヘンプを使用（産地証明書あり）</td>
           </tr>
           <tr>
             <td>THCフリー確認</td>
-            <td>各ロットごとに検査を実施</td>
+            <td>各ロットごとに検査を実施。国内基準に準拠</td>
           </tr>
           <tr>
             <td>供給体制</td>
-            <td class="placeholder">※ 詳細は資料請求後にご案内いたします</td>
+            <td>安定した供給体制を確保。小ロット発注にも対応</td>
           </tr>
         </tbody>
       </table>
@@ -760,7 +870,7 @@
         </div>
       </div>
       <div style="text-align: center; margin-top: 48px;">
-        <a href="#contact" class="btn-green">品質資料・検査情報を問い合わせる</a>
+        <a href="#contact-form" class="btn-green">品質資料・検査情報を問い合わせる</a>
       </div>
     </div>
   </section>
@@ -805,21 +915,48 @@
       <p class="section-lead">医療機関・薬局での取り扱いを前提に設計された商品をご用意しています。</p>
       <div class="lineup-grid">
         <div class="lineup-card">
-          <div class="lineup-icon">&#128138;</div>
+          <div class="lineup-visual">
+            <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
+              <rect x="36" y="18" width="48" height="84" rx="24" fill="#1a5632" opacity="0.1"/>
+              <rect x="42" y="24" width="36" height="72" rx="18" fill="#1a5632" opacity="0.08"/>
+              <line x1="42" y1="60" x2="78" y2="60" stroke="#8b7a3e" stroke-width="2"/>
+              <circle cx="60" cy="45" r="6" fill="#1a5632" opacity="0.15"/>
+              <circle cx="60" cy="75" r="6" fill="#8b7a3e" opacity="0.15"/>
+            </svg>
+          </div>
+          <div class="lineup-icon">💊</div>
           <h3>CBDカプセル</h3>
           <div class="lineup-type">ソフトカプセル</div>
-          <p>定量摂取がしやすく、患者さんへの説明もシンプル。院内販売で最も扱いやすい形状です。</p>
-          <div class="lineup-spec">
-            <span class="placeholder">内容量・規格は資料請求後にご案内</span>
+          <p>1日1〜2粒を目安に服用。味や匂いがなく、患者さんが最も抵抗なく取り入れやすい形態です。定量摂取できるため、院内での説明もシンプル。「まずはこちらから」とおすすめしやすい商品です。</p>
+          <div class="lineup-spec-detail">
+            <div class="spec-row"><span class="spec-label">形状</span><span>ソフトカプセル</span></div>
+            <div class="spec-row"><span class="spec-label">内容量</span><span>30粒入り（約1ヶ月分）</span></div>
+            <div class="spec-row"><span class="spec-label">CBD含有量</span><span>1粒あたり10〜25mg</span></div>
+            <div class="spec-row"><span class="spec-label">卸価格</span><span class="price-tbd">後日掲載</span></div>
+            <div class="spec-row"><span class="spec-label">想定院内販売価格</span><span class="price-tbd">後日掲載</span></div>
           </div>
         </div>
         <div class="lineup-card">
-          <div class="lineup-icon">&#128167;</div>
+          <div class="lineup-visual">
+            <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
+              <rect x="45" y="12" width="30" height="12" rx="3" fill="#1a5632" opacity="0.15"/>
+              <rect x="39" y="24" width="42" height="84" rx="6" fill="#1a5632" opacity="0.08"/>
+              <rect x="39" y="24" width="42" height="84" rx="6" stroke="#1a5632" stroke-width="1.5" opacity="0.2"/>
+              <circle cx="60" cy="66" r="15" fill="#8b7a3e" opacity="0.12"/>
+              <line x1="60" y1="12" x2="60" y2="6" stroke="#1a5632" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="60" cy="4" r="2" fill="#1a5632" opacity="0.3"/>
+            </svg>
+          </div>
+          <div class="lineup-icon">💧</div>
           <h3>CBDオイル</h3>
           <div class="lineup-type">液状（スポイトタイプ）</div>
-          <p>用量の調整がしやすく、個々の患者さんに合わせた提案が可能。柔軟な使い方ができます。</p>
-          <div class="lineup-spec">
-            <span class="placeholder">内容量・規格は資料請求後にご案内</span>
+          <p>舌下に数滴垂らして使用。患者さんごとに用量を調整でき、個別対応がしやすい形態です。ウェルネス志向の患者さんへの提案に適しています。</p>
+          <div class="lineup-spec-detail">
+            <div class="spec-row"><span class="spec-label">形状</span><span>スポイト付きガラスボトル</span></div>
+            <div class="spec-row"><span class="spec-label">内容量</span><span>30ml（約1ヶ月分）</span></div>
+            <div class="spec-row"><span class="spec-label">CBD含有量</span><span>500mg〜1000mg / 本</span></div>
+            <div class="spec-row"><span class="spec-label">卸価格</span><span class="price-tbd">後日掲載</span></div>
+            <div class="spec-row"><span class="spec-label">想定院内販売価格</span><span class="price-tbd">後日掲載</span></div>
           </div>
         </div>
       </div>
@@ -877,17 +1014,17 @@
     <h2>医療機関・薬局の皆さまへ</h2>
     <p>導入検討に必要な情報を、まずは資料でご確認ください。<br>品質・条件・導入フロー、すべてを丁寧にご案内いたします。</p>
     <div class="cta-buttons">
-      <a href="#" class="cta-btn">
+      <a href="#contact-form" class="cta-btn">
         <span class="cta-num">STEP 1</span>
         <span class="cta-label">医療機関向け資料を請求する</span>
         <span class="cta-desc">商品概要・品質情報・条件をお届け</span>
       </a>
-      <a href="#" class="cta-btn">
+      <a href="#contact-form" class="cta-btn">
         <span class="cta-num">STEP 2</span>
         <span class="cta-label">品質資料・検査情報を問い合わせる</span>
         <span class="cta-desc">COA・検査項目の詳細をご確認</span>
       </a>
-      <a href="#" class="cta-btn">
+      <a href="#contact-form" class="cta-btn">
         <span class="cta-num">STEP 3</span>
         <span class="cta-label">導入相談をする</span>
         <span class="cta-desc">条件・ロット・スケジュールをご相談</span>
@@ -895,9 +1032,56 @@
     </div>
   </section>
 
+  <!-- CONTACT FORM -->
+  <section class="section bg-white" id="contact-form">
+    <div class="section-inner">
+      <h2 class="section-title" style="text-align:center;">お問い合わせ・資料請求</h2>
+      <p class="section-lead" style="text-align:center; margin: 0 auto 32px;">以下のフォームよりお気軽にお問い合わせください。</p>
+      <div style="max-width:520px; margin:0 auto; background:var(--bg); border-radius:16px; padding:36px 32px; box-shadow:0 2px 12px rgba(0,0,0,0.04);">
+        <form onsubmit="event.preventDefault(); alert('送信ありがとうございます。（※デモ用のため実際には送信されません）');">
+          <div style="margin-bottom:16px;">
+            <label style="display:block; font-size:13px; color:var(--text-light); margin-bottom:4px; font-weight:600;">医療機関名 <span style="color:#c0392b; font-size:12px;">必須</span></label>
+            <input type="text" placeholder="例：○○クリニック" required style="width:100%; padding:10px 14px; border:1px solid var(--border); border-radius:6px; font-size:14px;">
+          </div>
+          <div style="margin-bottom:16px;">
+            <label style="display:block; font-size:13px; color:var(--text-light); margin-bottom:4px; font-weight:600;">ご担当者名 <span style="color:#c0392b; font-size:12px;">必須</span></label>
+            <input type="text" placeholder="例：山田 太郎" required style="width:100%; padding:10px 14px; border:1px solid var(--border); border-radius:6px; font-size:14px;">
+          </div>
+          <div style="margin-bottom:16px;">
+            <label style="display:block; font-size:13px; color:var(--text-light); margin-bottom:4px; font-weight:600;">メールアドレス <span style="color:#c0392b; font-size:12px;">必須</span></label>
+            <input type="email" placeholder="例：info@example.com" required style="width:100%; padding:10px 14px; border:1px solid var(--border); border-radius:6px; font-size:14px;">
+          </div>
+          <div style="margin-bottom:16px;">
+            <label style="display:block; font-size:13px; color:var(--text-light); margin-bottom:4px; font-weight:600;">電話番号</label>
+            <input type="tel" placeholder="例：03-1234-5678" style="width:100%; padding:10px 14px; border:1px solid var(--border); border-radius:6px; font-size:14px;">
+          </div>
+          <div style="margin-bottom:16px;">
+            <label style="display:block; font-size:13px; color:var(--text-light); margin-bottom:4px; font-weight:600;">お問い合わせ内容 <span style="color:#c0392b; font-size:12px;">必須</span></label>
+            <select required style="width:100%; padding:10px 14px; border:1px solid var(--border); border-radius:6px; font-size:14px;">
+              <option value="">選択してください</option>
+              <option>資料請求</option>
+              <option>品質情報の問い合わせ</option>
+              <option>導入相談</option>
+              <option>卸条件の確認</option>
+              <option>PB/OEM相談</option>
+              <option>その他</option>
+            </select>
+          </div>
+          <div style="margin-bottom:20px;">
+            <label style="display:block; font-size:13px; color:var(--text-light); margin-bottom:4px; font-weight:600;">ご質問・ご要望</label>
+            <textarea placeholder="お気軽にご記入ください" style="width:100%; padding:10px 14px; border:1px solid var(--border); border-radius:6px; font-size:14px; min-height:80px; resize:vertical;"></textarea>
+          </div>
+          <button type="submit" class="btn-green" style="width:100%; font-size:15px;">資料を請求する</button>
+          <p style="text-align:center; font-size:12px; color:var(--text-light); margin-top:10px;">※ 営業電話は一切いたしません</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
   <!-- FOOTER -->
   <footer class="footer">
-    <p>&copy; CBD Medical Supply. All rights reserved.</p>
+    <p style="margin-bottom:8px;">CBD Medical Supply ― 医療機関・薬局向けCBDウェルネス商材</p>
+    <p>&copy; 2026 CBD Medical Supply. All rights reserved.</p>
   </footer>
 
 </body>
