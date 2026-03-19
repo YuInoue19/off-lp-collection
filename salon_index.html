@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>サロン専用マッサージオイル｜施術が変わる。物販が生まれる。</title>
+  <title>サロン専用マッサージオイル｜お客様が自分から聞いてくるオイル</title>
   <style>
     /* ===== Reset & Base ===== */
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -87,6 +87,29 @@
       margin-top: 10px;
     }
 
+    /* ===== Mid CTA (控えめな中間CTA) ===== */
+    .mid-cta {
+      text-align: center;
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 1px solid #ece5d8;
+    }
+    .mid-cta a {
+      display: inline-block;
+      color: #b8860b;
+      font-size: .95rem;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 14px 36px;
+      border: 1.5px solid #d4b87a;
+      border-radius: 40px;
+      transition: background .2s, color .2s;
+    }
+    .mid-cta a:hover {
+      background: #b8860b;
+      color: #fff;
+    }
+
     /* ===== Hero / First View ===== */
     .hero {
       position: relative;
@@ -140,6 +163,181 @@
       content: "\2713\0020";
       color: #b8860b;
       font-weight: 700;
+    }
+
+    /* ===== Trust Badges ===== */
+    .trust-badges {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+    .trust-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,.7);
+      border: 1px solid #e0d5c0;
+      border-radius: 8px;
+      padding: 8px 14px;
+      font-size: .78rem;
+      color: #6b5e4e;
+      font-weight: 600;
+    }
+    .trust-badge::before {
+      content: "\2713";
+      color: #b8860b;
+      font-weight: 700;
+      font-size: .85rem;
+    }
+
+    /* ===== Impact Numbers ===== */
+    .impact-section {
+      background: linear-gradient(135deg, #2e2518, #4a3d2e);
+      padding: 56px 20px;
+      text-align: center;
+    }
+    .impact-label {
+      color: #c9b99a;
+      font-size: .85rem;
+      letter-spacing: .15em;
+      margin-bottom: 32px;
+    }
+    .impact-label::before,
+    .impact-label::after {
+      content: "──";
+      margin: 0 12px;
+      color: #6b5e4e;
+    }
+    .impact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 680px;
+      margin: 0 auto 28px;
+    }
+    .impact-item {
+      text-align: center;
+    }
+    .impact-item .impact-category {
+      font-size: .82rem;
+      color: #c9b99a;
+      margin-bottom: 8px;
+      letter-spacing: .06em;
+    }
+    .impact-item .impact-number {
+      font-family: "Noto Serif JP", serif;
+      font-size: 1.8rem;
+      color: #e2b84b;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 6px;
+    }
+    .impact-item .impact-desc {
+      font-size: .78rem;
+      color: #9a8e7c;
+      line-height: 1.5;
+    }
+    .impact-note {
+      color: #7a7062;
+      font-size: .75rem;
+      margin-top: 8px;
+    }
+
+    /* ===== Day Story Timeline ===== */
+    .day-story {
+      padding: 72px 0;
+      background: #fff;
+    }
+    .timeline {
+      max-width: 600px;
+      margin: 0 auto 32px;
+      position: relative;
+    }
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 36px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, #c9952e, #e8d5b0);
+    }
+    .timeline-item {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 28px;
+      position: relative;
+    }
+    .timeline-time {
+      flex-shrink: 0;
+      width: 72px;
+      text-align: right;
+      padding-top: 4px;
+    }
+    .timeline-time .time {
+      font-family: "Noto Serif JP", serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #b8860b;
+    }
+    .timeline-dot {
+      flex-shrink: 0;
+      width: 14px;
+      height: 14px;
+      background: #c9952e;
+      border-radius: 50%;
+      margin-top: 6px;
+      z-index: 1;
+      box-shadow: 0 0 0 4px #fff, 0 0 0 5px #e8d5b0;
+    }
+    .timeline-content {
+      flex: 1;
+      background: #faf8f5;
+      border-radius: 12px;
+      padding: 18px 22px;
+      border: 1px solid #ece5d8;
+    }
+    .timeline-content .action {
+      font-size: .92rem;
+      color: #3a3226;
+      margin-bottom: 6px;
+    }
+    .timeline-content .voice {
+      font-size: .88rem;
+      color: #b8860b;
+      font-style: italic;
+    }
+    .timeline-result {
+      max-width: 600px;
+      margin: 0 auto 20px;
+      background: linear-gradient(135deg, #f7f0e4, #faf6ee);
+      border: 2px solid #d4b87a;
+      border-radius: 14px;
+      padding: 24px;
+      text-align: center;
+    }
+    .timeline-result .result-label {
+      font-size: .82rem;
+      color: #8a7d6b;
+      margin-bottom: 8px;
+    }
+    .timeline-result .result-number {
+      font-family: "Noto Serif JP", serif;
+      font-size: 1.5rem;
+      color: #b8860b;
+      font-weight: 700;
+    }
+    .timeline-monthly {
+      text-align: center;
+      font-size: 1rem;
+      color: #5a5046;
+      margin-top: 16px;
+    }
+    .timeline-monthly strong {
+      color: #b8860b;
+      font-size: 1.2rem;
     }
 
     /* ===== Pain Points ===== */
@@ -675,6 +873,13 @@
       width: 100%;
       margin-top: 8px;
     }
+    .form-submit-note {
+      text-align: center;
+      font-size: .82rem;
+      color: #8a7d6b;
+      margin-top: 12px;
+      line-height: 1.6;
+    }
 
     /* ===== Footer ===== */
     .footer {
@@ -705,6 +910,33 @@
       .oem-flow { flex-direction: column; align-items: center; }
       .oem-flow-arrow { transform: rotate(90deg); }
       .form-box { padding: 28px 20px; }
+      .impact-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .impact-item .impact-number {
+        font-size: 1.5rem;
+      }
+      .trust-badges {
+        gap: 8px;
+      }
+      .trust-badge {
+        font-size: .72rem;
+        padding: 6px 10px;
+      }
+      .timeline::before {
+        left: 28px;
+      }
+      .timeline-time {
+        width: 56px;
+      }
+      .timeline-time .time {
+        font-size: .95rem;
+      }
+      .timeline-content {
+        padding: 14px 16px;
+      }
+      .day-story { padding: 52px 0; }
     }
   </style>
 </head>
@@ -713,16 +945,48 @@
 <!-- ==================== HERO ==================== -->
 <section class="hero">
   <div class="container">
-    <span class="hero-label">サロン専用マッサージオイル</span>
-    <h1 class="hero-title">施術が変わる。<br>物販が生まれる。</h1>
-    <p class="hero-sub">エステ・整体・リラクゼーションサロンのための<br>プロフェッショナル マッサージオイル</p>
+    <span class="hero-label">1人サロンの売上を変えるオイル</span>
+    <h1 class="hero-title">"これ、買えますか？"<br>お客様が自分から聞いてくる<br>マッサージオイル。</h1>
+    <p class="hero-sub">施術で使うだけで、自然と物販が生まれる。<br>客単価+1,000〜3,000円。月の物販売上+5万円〜。<br>1人サロンでも、無理なく始められます。</p>
     <div class="hero-checks">
-      <span>施術メニューの差別化に</span>
-      <span>ホームケア物販に</span>
-      <span>小ロットOEM対応</span>
+      <span>客単価+1,000〜3,000円UP</span>
+      <span>売り込み不要の物販</span>
+      <span>1人サロンOK</span>
+      <span>無料サンプルあり</span>
     </div>
-    <a href="#form" class="cta-btn cta-primary">無料サンプルを申し込む</a>
-    <p class="cta-note">※ 送料無料・営業電話なし</p>
+    <a href="#form" class="cta-btn cta-primary">無料サンプルで試してみる</a>
+    <p class="cta-note">※ 送料無料・営業電話なし・しつこい勧誘ゼロ</p>
+    <div class="trust-badges">
+      <span class="trust-badge">THCフリー検査済</span>
+      <span class="trust-badge">パッチテスト済</span>
+      <span class="trust-badge">国内GMP工場製造</span>
+      <span class="trust-badge">送料無料</span>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== IMPACT NUMBERS ==================== -->
+<section class="impact-section">
+  <p class="impact-label">導入サロンのイメージ</p>
+  <div class="container">
+    <div class="impact-grid">
+      <div class="impact-item">
+        <div class="impact-category">客単価UP</div>
+        <div class="impact-number">+1,000〜3,000円</div>
+        <div class="impact-desc">オイルオプション追加で</div>
+      </div>
+      <div class="impact-item">
+        <div class="impact-category">物販売上</div>
+        <div class="impact-number">月+5万円〜</div>
+        <div class="impact-desc">施術で体験 → 自然に購入</div>
+      </div>
+      <div class="impact-item">
+        <div class="impact-category">リピート</div>
+        <div class="impact-number">自然に定着</div>
+        <div class="impact-desc">施術で体験 → 自宅でも使いたい</div>
+      </div>
+    </div>
+    <p class="impact-note">※ 想定値。施術頻度やメニュー構成により異なります</p>
   </div>
 </section>
 
@@ -795,12 +1059,15 @@
 
     <div class="reason-card">
       <span class="reason-num">理由 02</span>
-      <h3>施術体験が、そのまま<span class="accent">物販</span>につながる</h3>
+      <h3>"売り込まない物販"という<span class="accent">新しいかたち</span></h3>
       <p>
+        あなたがやることは、いつもの施術にこのオイルを使うだけ。<br>
+        施術が終わった後、お客様の方から<span class="highlight">「これ、何のオイルですか？」</span>と聞いてきます。<br><br>
+        「よかったらご自宅用もありますよ」――それだけで物販は成立します。<br>
+        <strong>押し売り・営業トークは一切必要ありません。</strong><br><br>
         施術で使ったオイルを、ホームケア用としてそのままご提案。<br>
         お客様は施術中に香り・テクスチャを体感しているから、<br>
-        <span class="highlight">「これ、家でも使いたい」が自然に生まれます。</span><br><br>
-        押し売りではなく、"体験の延長"としての物販。<br>
+        "体験の延長"として自然に購入されます。<br>
         だから売りやすく、リピートされやすい。
       </p>
     </div>
@@ -814,6 +1081,49 @@
         <span class="highlight">「まずは試してみる」から始められます。</span>
       </p>
     </div>
+
+    <!-- 中間CTA: 選ばれる3つの理由 後 -->
+    <div class="mid-cta">
+      <a href="#form">まずは無料サンプルで使用感を確かめる →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== DAY STORY ==================== -->
+<section class="day-story">
+  <div class="container">
+    <h2 class="section-title">あるサロンの1日</h2>
+    <p class="section-sub">導入するとどう変わる？ リアルな1日をイメージしてみてください</p>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-time">
+          <span class="time">10:00</span>
+        </div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <p class="action">最初のお客様。フェイシャルに<strong>オイルオプション（+2,000円）</strong>を追加。</p>
+          <p class="voice">「いい香り…何のオイルですか？」</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">
+          <span class="time">10:50</span>
+        </div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <p class="action">施術後、「ご自宅用もありますよ」とご案内。</p>
+          <p class="voice">ホームケア用1本（¥3,500）をお買い上げ。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-result">
+      <p class="result-label">今日の追加売上</p>
+      <p class="result-number">オプション +2,000円 + 物販 +3,500円 = +5,500円</p>
+    </div>
+
+    <p class="timeline-monthly">これが週5日続くと、月の追加売上は <strong>+11万円</strong> に。</p>
   </div>
 </section>
 
@@ -854,6 +1164,11 @@
     <div class="scene-tip">
       既存メニューに<strong>"オイルオプション"</strong>を追加するだけで、<br>
       <strong>+1,000〜3,000円の単価アップ</strong>が見込めます。
+    </div>
+
+    <!-- 中間CTA: 施術での使い方 後 -->
+    <div class="mid-cta">
+      <a href="#form">あなたのサロンに合うか、無料で試してみる →</a>
     </div>
   </div>
 </section>
@@ -995,6 +1310,11 @@
     <div class="lineup-note">
       施術用と物販用は<strong>同一処方</strong>。<br>
       「施術で使ったものと同じです」がそのまま販売トークになります。
+    </div>
+
+    <!-- 中間CTA: 商品ラインナップ 後 -->
+    <div class="mid-cta">
+      <a href="#form">無料サンプル＋導入資料を受け取る →</a>
     </div>
   </div>
 </section>
@@ -1262,6 +1582,7 @@
         <textarea placeholder="気になることがあればお気軽にご記入ください"></textarea>
       </div>
       <button type="submit" class="cta-btn cta-primary form-submit">無料サンプルを受け取る</button>
+      <p class="form-submit-note">最短翌営業日発送。届いたら、いつもの施術で使うだけ。</p>
       <p class="cta-note">※ 営業電話は一切いたしません</p>
     </form>
   </div>
