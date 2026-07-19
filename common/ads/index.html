@@ -1,0 +1,1514 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>高品質な植物由来ウェルネス原料｜原料調達から商品化まで一貫支援 - Green Trade Japan</title>
+  <meta name="description" content="植物由来の機能性原料をBtoBで提供。品質管理ISO三冠取得、小ロット10gから対応。原料供給・OEM企画・販路設計まで一貫サポート。">
+  <meta name="robots" content="index, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-primary: #1a3c34;
+      --color-primary-light: #2d5a4e;
+      --color-primary-pale: #e8f0ed;
+      --color-primary-dark: #0f2620;
+      --color-accent: #b8964e;
+      --color-accent-light: #d4b06a;
+      --color-accent-pale: #f7f3e8;
+      --color-bg: #fafaf7;
+      --color-bg-warm: #f5f3ee;
+      --color-bg-dark: #0f2620;
+      --color-text: #2c2c2c;
+      --color-text-light: #6b6b6b;
+      --color-text-muted: #999999;
+      --color-white: #ffffff;
+      --color-border: #e0ddd5;
+      --font-sans: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
+      --font-serif: 'Noto Serif JP', serif;
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.04);
+      --shadow-md: 0 4px 20px rgba(0,0,0,0.06);
+      --shadow-lg: 0 12px 40px rgba(0,0,0,0.08);
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 12px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--color-text);
+      background: var(--color-bg);
+      line-height: 1.8;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ===== UTILITY ===== */
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section {
+      padding: 100px 0;
+    }
+
+    .section-label {
+      font-family: var(--font-sans);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: 1.75rem;
+      font-weight: 500;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      color: var(--color-primary);
+    }
+
+    .section-lead {
+      font-size: 1rem;
+      color: var(--color-text-light);
+      max-width: 680px;
+      line-height: 2;
+    }
+
+    /* ===== BUTTONS ===== */
+    .btn {
+      display: inline-block;
+      padding: 18px 48px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      text-decoration: none;
+      border-radius: var(--radius-sm);
+      transition: all 0.3s ease;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      border: none;
+      font-family: var(--font-sans);
+    }
+
+    .btn-primary {
+      background: var(--color-accent);
+      color: var(--color-white);
+    }
+    .btn-primary:hover {
+      background: var(--color-accent-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(184, 150, 78, 0.3);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--color-primary);
+      border: 1.5px solid var(--color-primary);
+    }
+    .btn-outline:hover {
+      background: var(--color-primary);
+      color: var(--color-white);
+      transform: translateY(-2px);
+    }
+
+    .btn-white {
+      background: var(--color-white);
+      color: var(--color-primary);
+      font-weight: 600;
+    }
+    .btn-white:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    }
+
+    .btn-green {
+      background: var(--color-primary);
+      color: var(--color-white);
+      font-weight: 600;
+    }
+    .btn-green:hover {
+      background: var(--color-primary-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(26, 60, 52, 0.3);
+    }
+
+    .btn-lg {
+      padding: 20px 56px;
+      font-size: 1.05rem;
+    }
+
+    /* ===== HEADER ===== */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.97);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--color-border);
+      padding: 14px 0;
+      transition: all 0.3s ease;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .header-logo-text {
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      letter-spacing: 0.05em;
+    }
+
+    .header-logo-sub {
+      font-size: 0.65rem;
+      color: var(--color-text-light);
+      font-weight: 400;
+    }
+
+    .header-group {
+      font-size: 0.65rem;
+      color: var(--color-text-muted);
+      padding: 4px 10px;
+      background: var(--color-bg);
+      border-radius: 3px;
+      font-weight: 500;
+    }
+
+    .header-cta .btn {
+      padding: 10px 28px;
+      font-size: 0.8rem;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(155deg, var(--color-bg-dark) 0%, var(--color-primary) 45%, var(--color-primary-light) 100%);
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 20% 50%, rgba(184,150,78,0.08) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 20%, rgba(255,255,255,0.04) 0%, transparent 50%),
+        radial-gradient(ellipse at 60% 80%, rgba(184,150,78,0.04) 0%, transparent 40%);
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 120px;
+      background: linear-gradient(to top, var(--color-bg), transparent);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 160px 0 120px;
+    }
+
+    .hero-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      color: var(--color-accent);
+      margin-bottom: 32px;
+      font-weight: 400;
+    }
+
+    .hero-title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 4.5vw, 3rem);
+      font-weight: 500;
+      color: var(--color-white);
+      line-height: 1.65;
+      margin-bottom: 28px;
+    }
+
+    .hero-title em {
+      font-style: normal;
+      color: var(--color-accent);
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.7);
+      line-height: 2;
+      max-width: 580px;
+      margin-bottom: 48px;
+      font-weight: 300;
+    }
+
+    .hero-badges {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 18px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: var(--radius-sm);
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.9);
+      font-weight: 500;
+    }
+
+    .hero-badge-icon {
+      font-size: 0.9rem;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .hero-note {
+      margin-top: 20px;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.35);
+    }
+
+    /* ===== PROBLEMS ===== */
+    .problems {
+      background: var(--color-white);
+    }
+
+    .problems-intro {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      color: var(--color-primary);
+      line-height: 2;
+      margin-top: 40px;
+      margin-bottom: 48px;
+      padding-left: 20px;
+      border-left: 3px solid var(--color-accent);
+      max-width: 700px;
+    }
+
+    .problems-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .problem-card {
+      padding: 36px 28px;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      transition: all 0.3s ease;
+    }
+
+    .problem-card:hover {
+      border-color: var(--color-accent);
+      box-shadow: var(--shadow-md);
+    }
+
+    .problem-icon {
+      width: 52px;
+      height: 52px;
+      background: var(--color-bg-warm);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      font-size: 1.3rem;
+    }
+
+    .problem-card h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: var(--color-primary);
+    }
+
+    .problem-card p {
+      font-size: 0.88rem;
+      color: var(--color-text-light);
+      line-height: 1.8;
+    }
+
+    /* ===== SOLUTION ===== */
+    .solution {
+      background: var(--color-bg-warm);
+    }
+
+    .solution-statement {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      line-height: 1.9;
+      color: var(--color-primary);
+      max-width: 700px;
+      margin: 48px 0;
+      font-weight: 500;
+    }
+
+    .solution-statement em {
+      font-style: normal;
+      color: var(--color-accent);
+      border-bottom: 2px solid var(--color-accent);
+      padding-bottom: 2px;
+    }
+
+    .solution-flow {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      margin-top: 48px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .solution-step {
+      flex: 1;
+      min-width: 180px;
+      text-align: center;
+      padding: 32px 20px;
+      background: var(--color-white);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .solution-step-icon {
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+
+    .solution-step h4 {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--color-primary);
+      margin-bottom: 6px;
+    }
+
+    .solution-step p {
+      font-size: 0.78rem;
+      color: var(--color-text-light);
+      line-height: 1.6;
+    }
+
+    .solution-arrow {
+      font-size: 1.5rem;
+      color: var(--color-accent);
+      padding: 0 8px;
+      flex-shrink: 0;
+    }
+
+    /* ===== STRENGTHS ===== */
+    .strengths {
+      background: var(--color-white);
+    }
+
+    .strengths-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 56px;
+    }
+
+    .strength-card {
+      padding: 40px 28px;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .strength-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--color-accent), var(--color-accent-light));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+
+    .strength-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .strength-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+    }
+
+    .strength-num {
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--color-primary-pale);
+      margin-bottom: 16px;
+      line-height: 1;
+    }
+
+    .strength-card h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--color-primary);
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+
+    .strength-card p {
+      font-size: 0.88rem;
+      color: var(--color-text-light);
+      line-height: 1.85;
+    }
+
+    /* ===== INDUSTRIES ===== */
+    .industries {
+      background: linear-gradient(155deg, var(--color-bg-dark) 0%, var(--color-primary) 45%, var(--color-primary-light) 100%);
+      color: var(--color-white);
+    }
+
+    .industries .section-label {
+      color: var(--color-accent);
+    }
+
+    .industries .section-title {
+      color: var(--color-white);
+    }
+
+    .industries .section-lead {
+      color: rgba(255,255,255,0.7);
+    }
+
+    .industries-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 48px;
+    }
+
+    .industry-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius-md);
+      padding: 32px 28px;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      transition: all 0.3s ease;
+    }
+
+    .industry-card:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.2);
+    }
+
+    .industry-icon {
+      width: 52px;
+      height: 52px;
+      background: rgba(184,150,78,0.15);
+      border: 1px solid rgba(184,150,78,0.25);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+
+    .industry-card h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .industry-card p {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.8;
+    }
+
+    .industry-tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .industry-tag {
+      font-size: 0.7rem;
+      padding: 3px 10px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 20px;
+      color: rgba(255,255,255,0.6);
+    }
+
+    /* ===== MID CTA ===== */
+    .mid-cta {
+      background: var(--color-accent-pale);
+      padding: 72px 0;
+      text-align: center;
+    }
+
+    .mid-cta-title {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: var(--color-primary);
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
+    .mid-cta-sub {
+      font-size: 0.95rem;
+      color: var(--color-text-light);
+      margin-bottom: 36px;
+    }
+
+    /* ===== QUALITY ===== */
+    .quality {
+      background: var(--color-bg);
+    }
+
+    .quality-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .quality-item {
+      text-align: center;
+      padding: 48px 24px;
+      background: var(--color-white);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s ease;
+    }
+
+    .quality-item:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-4px);
+    }
+
+    .quality-icon {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 20px;
+      background: var(--color-primary-pale);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+    }
+
+    .quality-item h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--color-primary);
+      margin-bottom: 12px;
+    }
+
+    .quality-item p {
+      font-size: 0.85rem;
+      color: var(--color-text-light);
+      line-height: 1.8;
+    }
+
+    .quality-table-wrap {
+      margin-top: 56px;
+    }
+
+    .quality-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--color-white);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .quality-table th,
+    .quality-table td {
+      padding: 18px 24px;
+      text-align: left;
+      font-size: 0.9rem;
+    }
+
+    .quality-table thead th {
+      background: var(--color-primary);
+      color: var(--color-white);
+      font-weight: 500;
+      font-size: 0.82rem;
+      letter-spacing: 0.05em;
+    }
+
+    .quality-table tbody tr {
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .quality-table tbody tr:last-child {
+      border-bottom: none;
+    }
+
+    .quality-table td:first-child {
+      font-weight: 600;
+      color: var(--color-primary);
+      white-space: nowrap;
+      width: 200px;
+    }
+
+    .quality-table tbody tr:nth-child(even) {
+      background: var(--color-bg);
+    }
+
+    /* ===== STEPS ===== */
+    .steps {
+      background: var(--color-white);
+    }
+
+    .steps-container {
+      display: flex;
+      gap: 0;
+      margin-top: 56px;
+      position: relative;
+    }
+
+    .steps-container::before {
+      content: '';
+      position: absolute;
+      top: 40px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--color-border);
+      z-index: 0;
+    }
+
+    .step-item {
+      flex: 1;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      padding: 0 16px;
+    }
+
+    .step-num {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 24px;
+      background: var(--color-primary);
+      color: var(--color-white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      font-weight: 700;
+      box-shadow: 0 4px 16px rgba(26, 60, 52, 0.2);
+    }
+
+    .step-item h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--color-primary);
+      margin-bottom: 10px;
+    }
+
+    .step-item p {
+      font-size: 0.82rem;
+      color: var(--color-text-light);
+      line-height: 1.8;
+    }
+
+    /* ===== FAQ ===== */
+    .faq {
+      background: var(--color-bg-warm);
+    }
+
+    .faq-list {
+      margin-top: 48px;
+      max-width: 800px;
+    }
+
+    .faq-item {
+      background: var(--color-white);
+      border-radius: var(--radius-md);
+      margin-bottom: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .faq-question {
+      padding: 24px 28px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--color-primary);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      transition: background 0.2s;
+    }
+
+    .faq-question:hover {
+      background: var(--color-bg);
+    }
+
+    .faq-q-mark {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      background: var(--color-primary-pale);
+      color: var(--color-primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    .faq-answer {
+      padding: 0 28px 24px 76px;
+      font-size: 0.9rem;
+      color: var(--color-text-light);
+      line-height: 1.9;
+    }
+
+    /* ===== FINAL CTA ===== */
+    .final-cta {
+      background: linear-gradient(155deg, var(--color-bg-dark) 0%, var(--color-primary) 45%, var(--color-primary-light) 100%);
+      padding: 100px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .final-cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 50%, rgba(184,150,78,0.1) 0%, transparent 60%);
+    }
+
+    .final-cta-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .final-cta-title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 500;
+      color: var(--color-white);
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+
+    .final-cta-title em {
+      font-style: normal;
+      color: var(--color-accent);
+    }
+
+    .final-cta-sub {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 44px;
+      line-height: 1.8;
+    }
+
+    .final-cta-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .final-cta-note {
+      margin-top: 20px;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.4);
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: #0a1a15;
+      color: rgba(255,255,255,0.5);
+      padding: 48px 0 36px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 32px;
+    }
+
+    .footer-brand {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 8px;
+    }
+
+    .footer-group {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 12px;
+    }
+
+    .footer-address {
+      font-size: 0.78rem;
+      line-height: 1.8;
+      font-style: normal;
+      color: rgba(255,255,255,0.4);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .footer-links a {
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+      font-size: 0.78rem;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: rgba(255,255,255,0.8);
+    }
+
+    .footer-copyright {
+      text-align: center;
+      margin-top: 36px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      font-size: 0.72rem;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .section {
+        padding: 72px 0;
+      }
+
+      .section-title {
+        font-size: 1.4rem;
+      }
+
+      .hero-content {
+        padding: 120px 0 80px;
+      }
+
+      .hero-ctas {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .hero-ctas .btn {
+        text-align: center;
+      }
+
+      .problems-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .solution-statement {
+        font-size: 1.2rem;
+      }
+
+      .solution-flow {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .solution-arrow {
+        transform: rotate(90deg);
+        padding: 4px 0;
+      }
+
+      .strengths-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .industries-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .quality-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .quality-table td:first-child {
+        white-space: normal;
+        width: auto;
+      }
+
+      .steps-container {
+        flex-direction: column;
+        gap: 32px;
+      }
+
+      .steps-container::before {
+        top: 0;
+        bottom: 0;
+        left: 40px;
+        right: auto;
+        width: 2px;
+        height: auto;
+      }
+
+      .step-item {
+        text-align: left;
+        display: flex;
+        gap: 20px;
+        align-items: flex-start;
+        padding: 0;
+      }
+
+      .step-num {
+        width: 56px;
+        height: 56px;
+        font-size: 1.2rem;
+        margin: 0;
+        flex-shrink: 0;
+      }
+
+      .mid-cta {
+        padding: 56px 0;
+      }
+
+      .mid-cta-title {
+        font-size: 1.3rem;
+      }
+
+      .final-cta {
+        padding: 72px 0;
+      }
+
+      .final-cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+
+      .footer-links {
+        flex-wrap: wrap;
+      }
+
+      .header-group {
+        display: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 16px;
+      }
+
+      .hero-badges {
+        gap: 8px;
+      }
+
+      .hero-badge {
+        font-size: 0.72rem;
+        padding: 6px 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#" class="header-logo">
+        <div>
+          <div class="header-logo-text">Green Trade Japan</div>
+          <div class="header-logo-sub">植物由来ウェルネス原料のBtoB供給</div>
+        </div>
+        <span class="header-group">DMM Group</span>
+      </a>
+      <div class="header-cta">
+        <a href="#contact" class="btn btn-green">お問い合わせ</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="container hero-content">
+      <p class="hero-label">FOR B2B WELLNESS MATERIAL PARTNERS</p>
+      <h1 class="hero-title">
+        高品質な<em>植物由来原料</em>で、<br>
+        貴社の商品力を高める。
+      </h1>
+      <p class="hero-subtitle">
+        原料の調達から、商品企画・OEM設計・販路開拓まで。<br>
+        国際品質基準をクリアした機能性原料と、<br>
+        業界に精通した専門チームが、貴社の事業成長を支援します。
+      </p>
+      <div class="hero-badges">
+        <span class="hero-badge"><span class="hero-badge-icon">&#9745;</span> ISO三冠取得</span>
+        <span class="hero-badge"><span class="hero-badge-icon">&#9745;</span> 小ロット10gから対応</span>
+        <span class="hero-badge"><span class="hero-badge-icon">&#9745;</span> 全ロット第三者検査済み</span>
+      </div>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-primary btn-lg">まずはサンプルについてご相談</a>
+        <a href="#strengths" class="btn btn-outline" style="color: rgba(255,255,255,0.9); border-color: rgba(255,255,255,0.3);">サービスの特長を見る</a>
+      </div>
+      <p class="hero-note">* お問い合わせ後、専門スタッフが最適な原料をご提案いたします</p>
+    </div>
+  </section>
+
+  <!-- ===== PROBLEMS ===== -->
+  <section class="problems section">
+    <div class="container">
+      <p class="section-label">Challenges</p>
+      <h2 class="section-title">原料調達で、こんなお悩みはありませんか？</h2>
+      <p class="problems-intro">
+        ウェルネス市場の成長に伴い、高品質な植物由来原料への需要が高まっています。<br>
+        しかし、多くの事業者様が原料選定や商品化のプロセスで壁に直面しています。
+      </p>
+
+      <div class="problems-grid">
+        <div class="problem-card">
+          <div class="problem-icon">&#128270;</div>
+          <h3>信頼できる原料サプライヤーが見つからない</h3>
+          <p>品質基準を満たす原料供給元の選定に時間がかかる。検査体制やトレーサビリティの確認が煩雑で、比較検討に膨大なリソースが必要。</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">&#9888;</div>
+          <h3>法規制・表示ルールの理解に不安がある</h3>
+          <p>植物由来原料は規制が複雑で、商品化の際の表示・広告表現に不安がある。専門家に相談したいが、どこに聞けばよいかわからない。</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">&#128736;</div>
+          <h3>原料から商品化までの道筋が見えない</h3>
+          <p>良い原料が見つかっても、最適な剤形・濃度設計、OEM先の選定、販路開拓まで含めた商品化プロセスの全体設計ができていない。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SOLUTION ===== -->
+  <section class="solution section">
+    <div class="container">
+      <p class="section-label">Solution</p>
+      <h2 class="section-title">Green Trade Japanが、すべて解決します。</h2>
+
+      <p class="solution-statement">
+        原料の選定・供給から、<em>商品企画</em>、<em>OEM設計</em>、<br>
+        <em>販路開拓</em>まで。ワンストップで貴社の事業を支援します。
+      </p>
+
+      <div class="solution-flow">
+        <div class="solution-step">
+          <div class="solution-step-icon">&#128172;</div>
+          <h4>ヒアリング</h4>
+          <p>貴社の事業課題と<br>目指す方向性を理解</p>
+        </div>
+        <span class="solution-arrow">&#10145;</span>
+        <div class="solution-step">
+          <div class="solution-step-icon">&#128300;</div>
+          <h4>原料提案</h4>
+          <p>最適な原料と<br>配合設計をご提案</p>
+        </div>
+        <span class="solution-arrow">&#10145;</span>
+        <div class="solution-step">
+          <div class="solution-step-icon">&#128230;</div>
+          <h4>商品化支援</h4>
+          <p>OEM/PB企画から<br>製造まで伴走</p>
+        </div>
+        <span class="solution-arrow">&#10145;</span>
+        <div class="solution-step">
+          <div class="solution-step-icon">&#128200;</div>
+          <h4>販路開拓</h4>
+          <p>業界別の販売戦略と<br>チャネル設計を支援</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STRENGTHS ===== -->
+  <section id="strengths" class="strengths section">
+    <div class="container">
+      <p class="section-label">Strengths</p>
+      <h2 class="section-title">選ばれる6つの理由</h2>
+      <p class="section-lead">
+        単なる原料卸ではなく、貴社の事業パートナーとして。<br>
+        品質・法務・企画・販路まで、一貫してサポートします。
+      </p>
+
+      <div class="strengths-grid">
+        <div class="strength-card">
+          <div class="strength-num">01</div>
+          <h3>国際品質基準ISO三冠の<br>品質管理体制</h3>
+          <p>ISO9001、ISO22000、ISO13485を取得。原料の入荷から出荷まで、国際基準の品質管理プロセスで安心・安全をお届けします。</p>
+        </div>
+        <div class="strength-card">
+          <div class="strength-num">02</div>
+          <h3>全ロット第三者検査で<br>トレーサビリティ確保</h3>
+          <p>すべてのロットに対して第三者機関による検査を実施。COA（分析証明書）を完備し、エビデンスベースの品質保証を実現しています。</p>
+        </div>
+        <div class="strength-card">
+          <div class="strength-num">03</div>
+          <h3>法規制・コンプライアンスの<br>専門知見</h3>
+          <p>日本国内の法規制に精通した専門チームが、原料選定から広告表現まで、コンプライアンスに配慮した商品化をサポートします。</p>
+        </div>
+        <div class="strength-card">
+          <div class="strength-num">04</div>
+          <h3>10gからの小ロット対応で<br>リスク最小化</h3>
+          <p>テスト導入は10gから。大量発注のリスクを取らずに品質を確認できるので、新規参入の事業者様にも安心してお試しいただけます。</p>
+        </div>
+        <div class="strength-card">
+          <div class="strength-num">05</div>
+          <h3>原料供給から販路開拓まで<br>ワンストップ支援</h3>
+          <p>原料の提供だけでなく、OEM/PB企画、剤形設計、パッケージ提案、販売チャネルの設計まで、商品化の全工程を伴走します。</p>
+        </div>
+        <div class="strength-card">
+          <div class="strength-num">06</div>
+          <h3>DMM Groupの事業基盤による<br>安定供給</h3>
+          <p>DMM Groupの一員として、安定した供給体制と資本力を背景に、長期的なパートナーシップを構築。継続取引に必要な安定性を提供します。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INDUSTRIES ===== -->
+  <section class="industries section">
+    <div class="container">
+      <p class="section-label">Industries</p>
+      <h2 class="section-title">業界ごとの専門提案</h2>
+      <p class="section-lead">
+        画一的な原料提案ではなく、貴社の業界特性に合わせた<br>最適な原料・剤形・濃度・販売設計をご提案します。
+      </p>
+
+      <div class="industries-grid">
+        <div class="industry-card">
+          <div class="industry-icon">&#128138;</div>
+          <div>
+            <h3>ヘルスケア・医療機関</h3>
+            <p>クリニック・薬局で取り扱える品質基準をクリアした原料をご提案。患者様への説明資料やエビデンスもサポートします。</p>
+            <div class="industry-tags">
+              <span class="industry-tag">クリニック</span>
+              <span class="industry-tag">薬局</span>
+              <span class="industry-tag">動物病院</span>
+            </div>
+          </div>
+        </div>
+        <div class="industry-card">
+          <div class="industry-icon">&#128170;</div>
+          <div>
+            <h3>フィットネス・ウェルネス</h3>
+            <p>施設の価値を高めるウェルネス商材として。物販収益の新たな柱となる商品ラインをご提案します。</p>
+            <div class="industry-tags">
+              <span class="industry-tag">フィットネスジム</span>
+              <span class="industry-tag">ピラティス</span>
+              <span class="industry-tag">ヨガスタジオ</span>
+            </div>
+          </div>
+        </div>
+        <div class="industry-card">
+          <div class="industry-icon">&#9996;</div>
+          <div>
+            <h3>美容・エステ・サロン</h3>
+            <p>施術メニューの差別化と物販収益の両立を実現。サロン専売品としてのOEM/PB企画をサポートします。</p>
+            <div class="industry-tags">
+              <span class="industry-tag">エステサロン</span>
+              <span class="industry-tag">整体</span>
+              <span class="industry-tag">リラクゼーション</span>
+            </div>
+          </div>
+        </div>
+        <div class="industry-card">
+          <div class="industry-icon">&#128062;</div>
+          <div>
+            <h3>ペット・動物関連</h3>
+            <p>獣医師の監修のもと、ペット向けウェルネス製品の商品化を支援。動物病院チャネルでの販売設計まで対応します。</p>
+            <div class="industry-tags">
+              <span class="industry-tag">ペットフード</span>
+              <span class="industry-tag">動物病院</span>
+              <span class="industry-tag">ペットウェルネス</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MID CTA ===== -->
+  <section class="mid-cta">
+    <div class="container">
+      <h2 class="mid-cta-title">貴社の業界に最適な原料、ご提案します。</h2>
+      <p class="mid-cta-sub">まずはお気軽にご相談ください。専門スタッフが最適なプランをご案内します。</p>
+      <a href="#contact" class="btn btn-primary btn-lg">無料で相談する</a>
+    </div>
+  </section>
+
+  <!-- ===== QUALITY ===== -->
+  <section class="quality section">
+    <div class="container">
+      <p class="section-label">Quality & Trust</p>
+      <h2 class="section-title">信頼の品質管理体制</h2>
+      <p class="section-lead">
+        国際品質規格に準拠した管理体制で、安心・安全な原料をお届けします。
+      </p>
+
+      <div class="quality-grid">
+        <div class="quality-item">
+          <div class="quality-icon">&#127942;</div>
+          <h3>ISO三冠取得</h3>
+          <p>ISO9001（品質）、ISO22000（食品安全）、ISO13485（医療機器）の3規格を取得</p>
+        </div>
+        <div class="quality-item">
+          <div class="quality-icon">&#128300;</div>
+          <h3>全ロット第三者検査</h3>
+          <p>すべてのロットに対して第三者検査機関による分析を実施し、COAを発行</p>
+        </div>
+        <div class="quality-item">
+          <div class="quality-icon">&#128274;</div>
+          <h3>完全トレーサビリティ</h3>
+          <p>原料の産地から最終製品まで、全工程のトレーサビリティを確保</p>
+        </div>
+      </div>
+
+      <div class="quality-table-wrap">
+        <table class="quality-table">
+          <thead>
+            <tr>
+              <th>管理項目</th>
+              <th>内容</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>品質規格</td>
+              <td>ISO9001 / ISO22000 / ISO13485 取得</td>
+            </tr>
+            <tr>
+              <td>検査体制</td>
+              <td>全ロット第三者機関検査、COA（分析証明書）完備</td>
+            </tr>
+            <tr>
+              <td>トレーサビリティ</td>
+              <td>原産地証明、製造工程記録、輸送記録を一元管理</td>
+            </tr>
+            <tr>
+              <td>法規制対応</td>
+              <td>日本国内の法規制に準拠、コンプライアンスチェック体制あり</td>
+            </tr>
+            <tr>
+              <td>供給安定性</td>
+              <td>DMM Groupの事業基盤を活かした安定調達・在庫管理</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STEPS ===== -->
+  <section class="steps section">
+    <div class="container">
+      <p class="section-label">Flow</p>
+      <h2 class="section-title">ご導入までの流れ</h2>
+      <p class="section-lead">お問い合わせから最短2週間で取引開始。シンプルな4ステップで進みます。</p>
+
+      <div class="steps-container">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div>
+            <h3>お問い合わせ</h3>
+            <p>フォームまたはお電話にてご連絡ください。ご要望を簡単にお聞かせいただくだけでOKです。</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div>
+            <h3>ヒアリング・ご提案</h3>
+            <p>専門スタッフが貴社の事業内容・課題を詳しくヒアリング。最適な原料と商品化プランをご提案します。</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <div>
+            <h3>サンプル提供・評価</h3>
+            <p>小ロットのサンプルをお送りします。品質・使用感をご確認いただき、商品化の方向性を具体化します。</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">4</div>
+          <div>
+            <h3>取引開始</h3>
+            <p>条件合意後、継続取引を開始。商品化支援・販路開拓まで、長期的にサポートいたします。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="faq section">
+    <div class="container">
+      <p class="section-label">FAQ</p>
+      <h2 class="section-title">よくあるご質問</h2>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="faq-q-mark">Q</span>
+            最小ロットはどのくらいから対応可能ですか？
+          </div>
+          <div class="faq-answer">
+            テスト導入用として10gからご対応可能です。まずは少量で品質をご確認いただき、本格導入時にロットを拡大する流れをおすすめしています。
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="faq-q-mark">Q</span>
+            具体的にどのような原料を取り扱っていますか？
+          </div>
+          <div class="faq-answer">
+            植物由来の機能性原料を幅広く取り扱っております。貴社の製品コンセプトや対象市場に合わせて、最適な原料をご提案いたしますので、まずはお気軽にお問い合わせください。
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="faq-q-mark">Q</span>
+            OEMや自社ブランド商品の企画もサポートしてもらえますか？
+          </div>
+          <div class="faq-answer">
+            はい。原料の選定から、剤形設計、OEM先のご紹介、パッケージデザイン、販路設計まで、商品化に必要な全工程をワンストップでサポートいたします。
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="faq-q-mark">Q</span>
+            法規制面のサポートはありますか？
+          </div>
+          <div class="faq-answer">
+            日本国内の薬機法・食品衛生法等の法規制に精通した専門チームが、原料選定段階から広告表現まで、コンプライアンスに配慮したアドバイスを提供いたします。
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="faq-q-mark">Q</span>
+            取引開始までどのくらいの期間がかかりますか？
+          </div>
+          <div class="faq-answer">
+            お問い合わせからサンプル提供まで約1週間、条件合意後の取引開始まで最短2週間程度です。商品化をご希望の場合は、企画内容に応じてスケジュールをご提案いたします。
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="faq-q-mark">Q</span>
+            品質証明書（COA）は提供されますか？
+          </div>
+          <div class="faq-answer">
+            はい。すべてのロットに対して第三者検査機関による分析を実施し、COA（分析証明書）を発行しております。原産地証明やSDS（安全データシート）もご提供可能です。
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FINAL CTA ===== -->
+  <section id="contact" class="final-cta">
+    <div class="container final-cta-content">
+      <h2 class="final-cta-title">
+        貴社の事業に最適な<em>原料パートナー</em>を<br>
+        お探しではありませんか？
+      </h2>
+      <p class="final-cta-sub">
+        まずはお気軽にご相談ください。<br>
+        専門スタッフが貴社のご要望に合わせた原料・商品化プランをご提案いたします。
+      </p>
+      <div class="final-cta-buttons">
+        <a href="mailto:info@gtj-example.com" class="btn btn-primary btn-lg">お問い合わせはこちら</a>
+        <a href="#" class="btn btn-outline btn-lg" style="color: rgba(255,255,255,0.9); border-color: rgba(255,255,255,0.3);">資料をダウンロード</a>
+      </div>
+      <p class="final-cta-note">* 通常1営業日以内にご返信いたします</p>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <div class="footer-brand">Green Trade Japan</div>
+          <div class="footer-group">DMM Group</div>
+          <address class="footer-address">
+            <!-- 住所・連絡先は要確認 -->
+          </address>
+        </div>
+        <div class="footer-links">
+          <a href="#">会社概要</a>
+          <a href="#">プライバシーポリシー</a>
+          <a href="#">特定商取引法に基づく表記</a>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        &copy; 2026 Green Trade Japan Inc. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
